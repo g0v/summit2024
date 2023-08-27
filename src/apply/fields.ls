@@ -16,6 +16,7 @@ fields = {} <<<
         limitation: \上限20字
 
   "description_zh":
+    type: \@makeform/textarea
     meta:
       title: \議程簡介
       term: [{opset: \length, enabled: true, op: \lte, msg: '太長了', config: val: 500, method: \simple-word}]
@@ -25,6 +26,7 @@ fields = {} <<<
         limitation: \上限500字
 
   "description_en":
+    type: \@makeform/textarea
     meta:
       title: \議程簡介
       term: [{opset: \length, enabled: true, op: \lte, msg: '太長了', config: val: 500, method: \simple-word}]
