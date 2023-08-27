@@ -11,6 +11,7 @@ mod = ({root, ctx, t, pubsub, manager, bi}) ->
   info: subset: "open", fields: fields
   render: ->
   init: (base) ->
+    @formmgr = base.formmgr
     block.i18n.add-resource-bundle \en, "", i18n-res.en, true, true
     block.i18n.add-resource-bundle \zh-TW, "", i18n-res["zh-TW"], true, true
     bi.transform \i18n
