@@ -1,0 +1,33 @@
+div
+  include @/@loadingio/bootstrap.ext/index.pug
+  include @/ldview/index.pug
+  mixin widget(name)
+    div(ld="block",data-name=name)
+  style(type="text/css"): include:stylus index.styl
+  script(type="@plotdb/block")
+    include:lsc fields.ls
+    include:lsc i18n.ls
+    include:lsc index.ls
+  div(plug="form")
+    img.border-bottom.print-hide.embed-hide(path,path-src="img/index.jpg",
+    width="1600",height="1067",style="width:100%;height:auto",alt="summit form jumbotron")
+    .sect.embed-hide
+      img.mb-4(path,path-src="img/g0v-logo.svg",width="128",height="1288",style="height:auto",alt="g0v logo")
+      .pb-4
+      h1 #[span.text-sm(t="title.year")]#[br]#[span(t="title.name")]
+      p.text-muted(t="title.date")
+      hr
+      p
+        span(t="必填項目提示.0")
+        span.mx-2 #[span.text-danger.font-weight-bold *]
+        span(t="必填項目提示.1")
+    .sect
+      +widget("title_zh")
+      +widget("title_en")
+      +widget("description_zh")
+      +widget("description_en")
+      +widget("speaker")
+    .sect.embed-hide
+      .btn.btn-primary.btn-lg.px-4(t,ld="submit") 送件
+      .my-2: .text-danger.text-sm * #[span(t) 送件後無法再修改]
+    +nbr(4)

@@ -1,11 +1,27 @@
 {
-  "name": "summit-2024-cfp",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "author": "zbryikt",
+  "name": "@g0v/summit2024",
+  "private": true,
+  "description": "g0v summit 2024 view files",
+  "version": "0.0.1",
+  "homepage": "https://github.com/g0v/summit2024",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/g0v/summit2024"
   },
-  "author": "",
-  "license": "MIT"
+  "engines": {
+    "node": ">=0.12.6",
+    "npm": ">=1.2.2"
+  },
+  "scripts": {
+    "start": "npx server -r web -o true"
+  },
+  "devDependencies": {
+    "@loadingio/bootstrap.ext": "^0.0.9",
+    "@zbryikt/template": "^2.3.45",
+    "fedep": "^1.1.11",
+    "jsdom": "^21.1.0",
+    "ldview": "^1.4.0",
+    "livescript": "^1.6.0"
+  }
 }
