@@ -1,0 +1,78 @@
+#top-block {
+  background-image: url("../img/bg_top.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  z-index: -1;
+}
+
+#gray-bar {
+  right: 5%;
+  left: 35%;
+  top: 1rem;
+  height: 1.5rem;
+  background-color: var(--bs-gray-400);
+}
+
+#pgln-g0v {
+  left: 5%;
+  top: 1rem;
+}
+
+#main-text {
+  right: 10%;
+  top: 6.5rem;
+}
+
+#sub-text {
+  top: 30%;
+  left: 10%;
+}
+
+#timer-text {
+  right: 10%;
+  bottom: 25%;
+  z-index: 1;
+}
+#timer-text #days {
+  font-size: 10rem;
+  font-weight: 900;
+  line-height: 8rem;
+  font-family: monospace;
+}
+#timer-text #poll-o, #timer-text #poll-y {
+  position: absolute;
+  z-index: -1;
+}
+#timer-text #poll-o {
+  background-color: var(--pgln-brown);
+  height: 4rem;
+  width: 1.5rem;
+  right: 3.5rem;
+  bottom: -35%;
+}
+#timer-text #poll-y {
+  background-color: var(--pgln-yellow);
+  height: 9rem;
+  width: 1.5rem;
+  right: 1rem;
+  bottom: -30%;
+}
+
+#slogan {
+  margin-top: -4%;
+  z-index: 1;
+}
+
+.desc-block h1 {
+  color: var(--pgln-brown);
+  bottom: -2rem;
+  position: relative;
+  z-index: 1;
+  padding: 0 1.5rem;
+}
+.desc-block .content {
+  border-radius: 1rem;
+  filter: drop-shadow(0px 4px 4px #AAA);
+  background: var(--pgln-light);
+}

@@ -1,0 +1,64 @@
+extends _layout.pug
+block variables
+  - title = "CFP"
+block head
+  link(rel="stylesheet" href="/assets/css/index.css?version="+timestamp)
+block body
+  #top-block.w-100.position-relative
+    #gray-bar.position-absolute
+    #pgln-g0v.rounded-1.bg-white.px-3.py-0.w-max.position-absolute
+      img(src="assets/img/pgln_g0v.png", alt="", width='100')
+    #main-text.position-absolute.text-end
+      h2 summit 2024
+      h5 2024.05.04-5
+      h5 Taipei, Taiwan
+    #sub-text.position-absolute
+      .d-flex
+        div: h5 In progress →
+        .ms-4
+          h6 Now → 2024.02.02
+          h1.text-b 議程徵集中
+      .d-flex.mt-5
+        div: h5 Upcoming →
+        .ms-4
+          h6 2024.03.02 投稿截止
+          h6 2024.03.10 稿件修改截止
+    #timer-text.position-absolute
+      div: b 倒數
+      #days 252
+      .text-end: b 天
+      span#poll-o
+      span#poll-y
+
+  .container.px-md-5
+    img.w-100#slogan(src="assets/img/slogan.svg", alt="")
+    .brown-bar
+
+  .container.px-md-5
+    .desc-block.mt-5.pt-5
+      h1 今年的主題
+      .content.px-5.pt-5.py-4: ol
+        li <b>Nerd Politics v.s. 數位治理：</b>eID / 個人資料保護 / AI 科技規範 / 數位平台規管 / 數位性暴力 / 數位主權
+        li <b>資料、人工智慧與社群協作：</b>開放政府 / 大數據(資料治理) / 群眾外包 / 地圖資料 / 開放課程
+        li <b>草根、開放、多中心的公民社群如何回應政治與科技的極權：</b>社群治理 / 數位韌性 / 公民倡議 / 數位民防 / 開源精神
+        li <b>基於同理心、涵容、多元性的數位基礎建設：</b>網路禮儀 Netiquette / CoC / 數位兩極化 / 數位DEI（多元共融）/ 數位素養
+        li <b>技術與議題的交鋒：</b>SDG ／社會企業 / 數位轉型 / 創新創業 / 教育 / 非營利組織
+    .desc-block.mt-5.pt-5
+      h1 什麼是 g0v？
+      .content.px-5.pt-5.py-4
+        p 2012 年以來，公民黑客運動風起雲湧。以開放透明、公民參與為號召的 g0v 台灣零時政府社群在 2012 年底號召了第一場活動「第零次動員戡亂黑客松」，以「寫程式改造社會」為口號，從此公民黑客之火開始延燒，至今未歇。
+        p 八年間，在上千位參與者集體的貢獻下，透過一場場黑客松，打造出多項以開放資料、開放政府為精神的資訊平台，以縮短數位落差為初衷，降低公民參與門檻，使得議題審議可立基在具體事實，也提升理性討論公共事務的意識。
+        p.mb-0 在這場開放資料、開放政府的運動中，g0v 社群也開創出台灣公民社會與政府互動的新模式。
+    .desc-block.mt-5.pt-5
+      h1 關於 g0v Summit
+      .content.px-5.pt-5.py-4
+        p g0v Summit 台灣零時政府雙年會兩年舉辦一次，關注開放政府、開源協作、公民參與等議題，是國際開放政府社群的焦點活動，過去三屆吸引多達 33 國講者投稿。
+        p.mb-0 g0v 雙年會大部份由社群貢獻者志願籌辦，大會籌備的討論文件皆以共筆形式公開。議程的內容與審議秉持開放、協作精神，鼓勵會眾協作議程文字紀錄，大會亦備有即時口譯、手譯及影像直播，盡力創造一個輕鬆、多元、友善的參與環境。議程除了大會籌辦，也開放完整時段的「開放工作坊」（Unconference），由參與者提案決定主題，以演講、討論、工作坊等形式創造新的協作空間。自由報名的全場「閃電講」更是開源社群傳統，開放、分享的精神貫穿大會。
+    .desc-block.mt-5.pt-5
+      h1 g0v Summit 2024 特色
+      .content.px-5.pt-5.py-4
+        p g0v Summit 台灣零時政府雙年會兩年舉辦一次，關注開放政府、開源協作、公民參與等議題，是國際開放政府社群的焦點活動，過去三屆吸引多達 33 國講者投稿。
+        p.mb-0 g0v 雙年會大部份由社群貢獻者志願籌辦，大會籌備的討論文件皆以共筆形式公開。議程的內容與審議秉持開放、協作精神，鼓勵會眾協作議程文字紀錄，大會亦備有即時口譯、手譯及影像直播，盡力創造一個輕鬆、多元、友善的參與環境。議程除了大會籌辦，也開放完整時段的「開放工作坊」（Unconference），由參與者提案決定主題，以演講、討論、工作坊等形式創造新的協作空間。自由報名的全場「閃電講」更是開源社群傳統，開放、分享的精神貫穿大會。
+
+  #footer.mt-5.pt-5
+    .text-center.py-4 g0v summit 2024

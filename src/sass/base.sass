@@ -1,0 +1,40 @@
+:root
+  --pgln-orange: #DFB175
+  --pgln-yellow: rgba(245, 225, 116, 1)
+  --pgln-brown: rgba(120, 108, 74, 1)
+  --pgln-light: rgba(253, 239, 219, 1)
+
+html, body
+  margin: 0
+  padding: 0
+  height: 100%
+
+body
+  font-size: 1.1rem
+  font-family: 'Noto Sans TC', sans-serif
+
+b, .fw-bold
+  font-weight: bold
+
+h1, h2, h3, h4, h5
+  margin-bottom: .75rem
+  font-weight: bold
+
+h6
+  font-weight: bold
+
+a:link, a:visited
+  &:not(.btn, .nav-link)
+    text-decoration: underline
+    &:hover
+      filter: brightness(1.2)
+
+.btn, button
+  border-radius: 4px
+  box-shadow: none !important
+
+.w-max
+  width: max-content
+
+.text-b
+  color: var(--pgln-brown)
