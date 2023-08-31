@@ -14,6 +14,7 @@ html, body {
 body {
   font-size: 1.25rem;
   font-family: "Noto Sans TC", sans-serif;
+  overflow: hidden;
 }
 
 b, .fw-bold {
@@ -69,4 +70,28 @@ a:link:not(.btn, .nav-link):hover, a:visited:not(.btn, .nav-link):hover {
   --bs-btn-disabled-color: #fff;
   --bs-btn-disabled-bg: rgba(108, 154, 74, 1);
   --bs-btn-disabled-border-color: rgba(108, 154, 74, 1);
+}
+
+#loading {
+  background: var(--pgln-light);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+#loading img {
+  width: 5rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
 }
