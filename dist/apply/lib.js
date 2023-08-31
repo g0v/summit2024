@@ -44,8 +44,9 @@ window.lib = function(arg$){
       };
       if (/zh/.exec(lng)) {
         data.name = _(form["title_zh"]);
-        return data.description = _(form["description_zh"]);
+        data.description = _(form["description_zh"]);
       }
+      return data;
     }
   };
 };
