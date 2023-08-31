@@ -27,3 +27,4 @@ window.lib = ({def, i18n}) ->
     if /zh/.exec(lng) =>
       data.name = _(form["title_zh"])
       data.description = _(form["description_zh"])
+    data
