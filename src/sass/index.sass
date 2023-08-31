@@ -1,67 +1,55 @@
 
 #top-block
-  background-image: url("../img/bg_top.jpg")
+  background-image: url("../img/bg_top2.jpg")
   background-size: cover
   background-position: center
-  min-height: 100vh
-  z-index: -1
+  min-height: 110vh
 
-#gray-bar
-  right: 5%
-  left: 35%
-  top: 1rem
-  height: 1.5rem
-  background-color: var(--bs-gray-400)
-
-#pgln-g0v
-  left: 5%
-  top: 1rem
-
-#main-text
-  right: 10%
-  top: 6.5rem
-
-#sub-text
-  top: 30%
-  left: 10%
-
-#timer-text
-  right: 10%
-  bottom: 25%
-  z-index: 1
-  #days
-    font-size: 10rem
-    font-weight: 900
-    line-height: 8rem
-    font-family: monospace
-  #poll-o, #poll-y
-    position: absolute
-    z-index: -1
-  #poll-o
-    background-color: var(--pgln-brown)
-    height: 4rem
-    width: 1.5rem
-    right: 3.5rem
-    bottom: -35%
-  #poll-y
-    background-color: var(--pgln-yellow)
-    height: 9rem
-    width: 1.5rem
-    right: 1rem
-    bottom: -30%
-
-#slogan
-  margin-top: -4%
-  z-index: 1
-
-.desc-block
-  h1
+#topbar
+  img
+    height: 3rem
+    width: auto
+  a.link
+    text-decoration: none
     color: var(--pgln-brown)
-    bottom: -2rem
-    position: relative
+
+#write-something
+  h0
+    pointer-events: none
+    transform: translateY(50%)
     z-index: 1
-    padding: 0 1.5rem
+  .input-group
+    width: 60%
+  input
+    border: 0
+    box-shadow: none
+    font-size: 1.5rem
+    text-align: right
+
+#what-is-summit
   .content
-    border-radius: 1rem
-    filter: drop-shadow(0px 4px 4px #AAA)
-    background: var(--pgln-light)
+    color: var(--pgln-brown)
+    font-size: 1.8rem
+  #timer
+    color: var(--pgln-brown)
+    display: block
+    width: max-content
+    margin-left: auto
+    span
+      font-size: 8rem
+      font-family: monospace
+      font-weight: bold
+      line-height: 3rem
+      height: 3.5rem
+      display: block
+      padding-left: 3rem
+      padding-right: 1.5rem
+
+#what-is-g0v
+  background-image: url("../img/bg.jpg")
+  background-size: cover
+  background-position: center
+
+#summit-topics
+  .content
+    font-size: 3rem
