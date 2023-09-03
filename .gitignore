@@ -3,3 +3,4 @@ secret.*
 *.log
 .*.swp
 .DS_Store
+_public/

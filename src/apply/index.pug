@@ -22,11 +22,48 @@ div
         span.mx-2 #[span.text-danger.font-weight-bold *]
         span(t="必填項目提示.1")
     .sect
+      +widget("agreement_accept")
+      +widget("agreement_no_short")
+    .sect
       +widget("title_zh")
       +widget("title_en")
       +widget("description_zh")
       +widget("description_en")
-      +widget("speaker")
+      +widget("theme")
+      +widget("keywords")
+      +widget("email")
+      +widget("affiliation")
+      +widget("realname")
+      +widget("name")
+      +widget("social_link")
+      +widget("time_attend")
+      +widget("language")
+      +widget("visa_assistance")
+      +widget("diverse_traits")
+      +widget("event_format")
+    .sect.sect-speech
+      +widget("participate_format")
+      +widget("speach_speaker")
+    .sect.sect-panel
+      +widget("panel_speaker_1")
+      +widget("panel_speaker_1_affilation")
+      +widget("panel_speaker_2")
+      +widget("panel_speaker_2_affilation")
+      +widget("panel_speaker_3")
+      +widget("panel_speaker_3_affilation")
+      +widget("panel_note")
+      +widget("participate_format")
+    .sect.sect-workshop
+      +widget("workshop_length")
+      +widget("workshop_intro")
+      +widget("workshop_suitable")
+      +widget("workshop_equipment")
+      +widget("participate_format")
+      +widget("speach_speaker")
+    .sect
+      +widget("where_get")
+      +widget("something_to_say")
+
     .sect.embed-hide.view-hide
       .btn.btn-primary.btn-lg.px-4(t,ld="submit") 送件
       .my-2: .text-danger.text-sm * #[span(t) 送件後無法再修改]
