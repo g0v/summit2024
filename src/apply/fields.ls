@@ -175,10 +175,16 @@ fields = {} <<<
       plugin: [
         * type: \dependency
           config:
-            values: <[演講 工作坊 主題論壇]>
+            values: <[演講 主題論壇]>
             is-required: true
             visible: true
             targets: <[participate_format]>
+        * type: \dependency
+          config:
+            values: <[工作坊]>
+            is-required: true
+            visible: true
+            targets: <[participate_format_novideo]>
         * type: \dependency
           config:
             values: <[演講 工作坊]>
@@ -220,6 +226,17 @@ fields = {} <<<
           "現場參與"
           "線上參與"
           "預錄影片"
+        ]
+
+  "participate_format_novideo":
+    type: \@makeform/choice
+    meta:
+      title: "參加形式"
+      is-required: true
+      config:
+        values: [
+          "現場參與"
+          "線上參與"
         ]
 
   "speach_speaker":

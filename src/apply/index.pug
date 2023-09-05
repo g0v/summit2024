@@ -46,6 +46,7 @@ div
     .border-left.ml-5.px-4.py-3
       .sect-speech
         +widget("participate_format")
+        +widget("participate_novideo")
         div(ld="visibility",data-name="speach_speaker"): +widget("speach_speaker")
       .sect-panel(ld="visibility",data-name="sect-panel")
         +widget("panel_speaker_1")
@@ -55,14 +56,11 @@ div
         +widget("panel_speaker_3")
         +widget("panel_speaker_3_affilation")
         +widget("panel_note")
-        //-+widget("participate_format")
       .sect-workshop(ld="visibility",data-name="sect-workshop")
         +widget("workshop_length")
         +widget("workshop_intro")
         +widget("workshop_suitable")
         .view-hide: +widget("workshop_equipment")
-        //-+widget("participate_format")
-        //-+widget("speach_speaker")
     .sect
       .view-hide: +widget("where_get")
       .view-hide: +widget("something_to_say")

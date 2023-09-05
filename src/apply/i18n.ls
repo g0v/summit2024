@@ -21,11 +21,11 @@ i18n-res =
     "我已明確知悉並會遵守在本表單中的任何欄位中不要使用任何縮網址": "I'm aware and will not using any shortened URLs in any field on this form"
     "本區段會包含投稿與講者資訊的相關問題": "
     　g0v Summit 2024 have five themes: \n
-    1. Nerd Politics v.s. Digital Governance \n
-    2. Data, AI and Community Collaboration \n
-    3. How Grassroots, Open, and Multi-Centred Civic Communities Respond to Political and Technological Totalitarianism \n
-    4. Digital Infrastructure Based on Empathy, Inclusion and Diversity \n
-    5. Interaction Between Technology and Issues"
+    1. Nerd Politics v.s. Digital Governance-- eID / Personal Data Protection / AI Technology Regulation / Digital Platform Regulation / Digital Violence / Digital Sovereignty \n
+    2. Data, AI and Community Collaboration-- Open Government / Big Data (Data Governance) / Mass Outsourcing / Map Data / Open Courses \n
+    3. How Grassroots, Open, and Multi-Centred Civic Communities Respond to Political and Technological Totalitarianism-- Community Governance / Digital Toughness / Civic Advocacy / Digital Civil Defence / Open Spirit \n
+    4. Digital Infrastructure Based on Empathy, Inclusion and Diversity-- Netiquette / CoC / Digital Polarisation / Digital DEI (Diversity and Inclusion) / Digital Literacy \n
+    5. Interaction Between Technology and Issues-- SDG / Social Enterprise / Digital Transformation / Innovation / Education / Non-Profit Organisations"
     "您的投稿標題": "Topic of your submission"
     "投稿的內容說明": "Description of the submission"
     "請選擇與你投稿內容相關連之 g0v Summit 2024 主軸": "Please select a theme related to your submission for g0v Summit 2024"
