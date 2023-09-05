@@ -12,14 +12,14 @@ window.lib = ({def, i18n}) ->
       name: _(form["title_en"])
       description: _(form["description_en"])
       team:
-        name: _(form["speaker"])
+        name: _(form["name"])
         taxid: ''
-        pic: _(form["speaker"])
+        pic: _(form["name"])
       contact:
-        email: ''
-        name: ''
+        email: form["email"]
+        name: form["realname"]
         mobile: ''
-        title: ''
+        title: form["affiliation"]
         addr: ''
       budget:
         total: 0

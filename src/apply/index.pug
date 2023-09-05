@@ -21,7 +21,7 @@ div
         span(t="必填項目提示.0")
         span.mx-2 #[span.text-danger.font-weight-bold *]
         span(t="必填項目提示.1")
-    .sect
+    .sect.view-only
       +widget("agreement_accept")
       +widget("agreement_no_short")
     .sect
@@ -31,9 +31,9 @@ div
       +widget("description_en")
       +widget("theme")
       +widget("keywords")
-      +widget("email")
+      .view-only: +widget("email")
       +widget("affiliation")
-      +widget("realname")
+      .view-only: +widget("realname")
       +widget("name")
       +widget("social_link")
       +widget("time_attend")
