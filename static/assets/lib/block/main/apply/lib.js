@@ -32,7 +32,7 @@ window.lib = function(arg$){
         },
         contact: {
           email: form["email"],
-          name: form["realname"],
+          name: form["name"],
           mobile: '',
           title: form["affiliation"],
           addr: ''
