@@ -22,12 +22,11 @@ div
         span.mx-2 #[span.text-danger.font-weight-bold *]
         span(t="必填項目提示.1")
     .sect.view-hide
-      .p-4.border(style="white-space: pre-line;", t="這裡是 g0v Summit 2024 Call for Paper 的表單")
+      .p-4.mb-5.border(style="white-space: pre-line;", t="這裡是 g0v Summit 2024 Call for Paper 的表單")
       +widget("agreement_accept")
       +widget("agreement_no_short")
     .sect
-      .p-4.border(style="white-space: pre-line;", t="本區段會包含投稿與講者資訊的相關問題")
-    .sect
+      .p-4.mb-5.border(style="white-space: pre-line;", t="本區段會包含投稿與講者資訊的相關問題")
       +widget("title_zh")
       +widget("title_en")
       +widget("description_zh")
@@ -44,7 +43,7 @@ div
       .view-hide: +widget("visa_assistance")
       .view-hide: +widget("diverse_traits")
       +widget("event_format")
-    .border-left.ml-5.pl-4.py-3
+    .border-left.ml-5.px-4.py-3
       .sect-speech
         +widget("participate_format")
         div(ld="visibility",data-name="speach_speaker"): +widget("speach_speaker")
@@ -57,7 +56,7 @@ div
         +widget("panel_speaker_3_affilation")
         +widget("panel_note")
         //-+widget("participate_format")
-      .sect-workshop.border-left.ml-5.pl-4.py-3(ld="visibility",data-name="sect-workshop")
+      .sect-workshop(ld="visibility",data-name="sect-workshop")
         +widget("workshop_length")
         +widget("workshop_intro")
         +widget("workshop_suitable")
