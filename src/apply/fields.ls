@@ -104,9 +104,9 @@ fields = {} <<<
     type: \@makeform/checkbox
     meta:
       title: "Nerd Politics v.s. 數位治理"
-      is-required: true
+      is-required: false
       config:
-        value: [
+        values: [
           "eID"
           "個人資料保護"
           "AI 科技規範"
@@ -119,9 +119,9 @@ fields = {} <<<
     type: \@makeform/checkbox
     meta:
       title: "資料、人工智慧與社群協作"
-      is-required: true
+      is-required: false
       config:
-        value: [
+        values: [
           "開放政府"
           "大數據(資料治理)"
           "群眾外包"
@@ -133,9 +133,9 @@ fields = {} <<<
     type: \@makeform/checkbox
     meta:
       title: "草根、開放、多中心的公民社群如何回應政治與科技的極權"
-      is-required: true
+      is-required: false
       config:
-        value: [
+        values: [
           "社群治理"
           "數位韌性"
           "公民倡議"
@@ -147,9 +147,9 @@ fields = {} <<<
     type: \@makeform/checkbox
     meta:
       title: "基於同理心、涵容、多元性的數位基礎建設"
-      is-required: true
+      is-required: false
       config:
-        value: [
+        values: [
           "網路禮儀"
           "CoC"
           "數位兩極化"
@@ -161,9 +161,9 @@ fields = {} <<<
     type: \@makeform/checkbox
     meta:
       title: "技術與議題的交鋒"
-      is-required: true
+      is-required: false
       config:
-        value: [
+        values: [
           "SDG"
           "社會企業"
           "數位轉型"

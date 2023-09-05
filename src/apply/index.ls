@@ -31,7 +31,8 @@ mod = ({root, ctx, t, pubsub, manager, bi}) ->
     dependency = ({source, values, targets, is-required, visible}) ~>
       itf = fields[source].itf
       content = itf.content!
-      active = if Array.isArray(values) => (content in values) else (content == values)
+      content = if Array.isArray(content) => content else [content]
+      active = !!content.filter((c) -> if Array.isArray(values) => (c in values) else (c == values)).length
       required = if !is-required => !active else active
       visible = if !visible => !active else active
       for tgt in targets =>
