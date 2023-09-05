@@ -4,16 +4,20 @@ if [[ -d .git ]]; then
   REV=`git describe --always`
   rm -rf _public
   git clone $(git remote get-url origin) --depth 1 -b release _public
+  git clone $(git remote get-url origin) --depth 1 -b main _main
   cd _public
   git rm -r *
-  cp -R ../web/static ./static
-  #cp -R ../web/view ./view
+  cp -R ../_main/static ./static
+  mkdir -p static/assets
+  cp -R ../web/static/assets/lib static/assets/lib
+  cp -R ../web/view ./view
   cp -R ../dist ./
   git add *
   git commit -m "regen for $REV"
   git push
   cd ..
   rm -rf _public
+  rm -rf _main
 else
   echo "please use deploy under a git repo."
 fi
