@@ -19,11 +19,11 @@ i18n-res =
     "我已經閱讀完並同意以上資訊": "I have finished reading and accept the information"
     "我已明確知悉並會遵守在本表單中的任何欄位中不要使用任何縮網址": "I'm aware and will not using any shortened URLs in any field on this form"
     "本區段會包含投稿與講者資訊的相關問題": "
-    g0v Summit 2024 have five themes: <br>
-    1. Nerd Politics v.s. Digital Governance
-    2. Data, AI and Community Collaboration
-    3. How Grassroots, Open, and Multi-Centred Civic Communities Respond to Political and Technological Totalitarianism
-    4. Digital Infrastructure Based on Empathy, Inclusion and Diversity
+    g0v Summit 2024 have five themes: \n
+    1. Nerd Politics v.s. Digital Governance \n
+    2. Data, AI and Community Collaboration \n
+    3. How Grassroots, Open, and Multi-Centred Civic Communities Respond to Political and Technological Totalitarianism \n
+    4. Digital Infrastructure Based on Empathy, Inclusion and Diversity \n
     5. Interaction Between Technology and Issues"
     "您的投稿標題": "Topic of your submission"
     "投稿的內容說明": "Description of the submission"
@@ -114,11 +114,11 @@ i18n-res =
     "我已經閱讀完並同意以上資訊": "我已經閱讀完並同意以上資訊"
     "我已明確知悉並會遵守在本表單中的任何欄位中不要使用任何縮網址": "我已明確知悉並會遵守在本表單中的任何欄位中不要使用任何縮網址"
     "本區段會包含投稿與講者資訊的相關問題": "
-    g0v Summit 2024 議程包含以下五大主軸：<br>
-    1. Nerd Politics v.s. 數位治理：eID / 個人資料保護 / AI 科技規範 / 數位平台規管 / 數位性暴力 / 數位主權<br>
-    2. 資料、人工智慧與社群協作：開放政府 / 大數據(資料治理) / 群眾外包 / 地圖資料 / 開放課程<br>
-    3. 草根、開放、多中心的公民社群如何回應政治與科技的極權：社群治理 / 數位韌性 / 公民倡議 / 數位民防 / 開源精神<br>
-    4. 基於同理心、涵容、多元性的數位基礎建設：網路禮儀Netiquette / CoC / 數位兩極化 / 數位DEI（多元共融）/ 數位素養<br>
+    g0v Summit 2024 議程包含以下五大主軸： \n
+    1. Nerd Politics v.s. 數位治理：eID / 個人資料保護 / AI 科技規範 / 數位平台規管 / 數位性暴力 / 數位主權 \n
+    2. 資料、人工智慧與社群協作：開放政府 / 大數據(資料治理) / 群眾外包 / 地圖資料 / 開放課程 \n
+    3. 草根、開放、多中心的公民社群如何回應政治與科技的極權：社群治理 / 數位韌性 / 公民倡議 / 數位民防 / 開源精神 \n
+    4. 基於同理心、涵容、多元性的數位基礎建設：網路禮儀Netiquette / CoC / 數位兩極化 / 數位DEI（多元共融）/ 數位素養 \n
     5. 技術與議題的交鋒：SDG ／社會企業 / 數位轉型 / 創新創業 / 教育 / 非營利組織"
     "您的投稿標題": "您的投稿標題"
     "投稿的內容說明": "投稿的內容說明"
