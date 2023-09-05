@@ -26,6 +26,7 @@ div
       +widget("agreement_no_short")
     .sect
       div(style="white-space: pre-line;", t="本區段會包含投稿與講者資訊的相關問題")
+    .sect
       +widget("title_zh")
       +widget("title_en")
       +widget("description_zh")
@@ -45,7 +46,7 @@ div
     .sect.sect-speech
       +widget("participate_format")
       div(ld="visibility",data-name="speach_speaker"): +widget("speach_speaker")
-    .sect.sect-panel.border-left.ml-5.pl-4.py-3(ld="visibility",data-name="sect-panel")
+    .sect-panel.border-left.ml-5.pl-4.py-3(ld="visibility",data-name="sect-panel")
       +widget("panel_speaker_1")
       +widget("panel_speaker_1_affilation")
       +widget("panel_speaker_2")
@@ -54,7 +55,7 @@ div
       +widget("panel_speaker_3_affilation")
       +widget("panel_note")
       //-+widget("participate_format")
-    .sect.sect-workshop.border-left.ml-5.pl-4.py-3(ld="visibility",data-name="sect-workshop")
+    .sect-workshop.border-left.ml-5.pl-4.py-3(ld="visibility",data-name="sect-workshop")
       +widget("workshop_length")
       +widget("workshop_intro")
       +widget("workshop_suitable")
