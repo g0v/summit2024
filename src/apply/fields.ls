@@ -172,6 +172,38 @@ fields = {} <<<
           "主題論壇"
           "工作坊"
         ]
+      plugin: [
+        * type: \dependency
+          config:
+            values: <[演講 工作坊]>
+            is-required: true
+            visible: true
+            targets: <[speach_speaker]>
+        * type: \dependency
+          config:
+            values: <[主題論壇]>
+            is-required: true
+            visible: true
+            targets: <[
+              sect-panel
+              panel_note
+              panel_speaker_1 panel_speaker_1_affilation
+              panel_speaker_2 panel_speaker_2_affilation
+              panel_speaker_3 panel_speaker_3_affilation
+            ]>
+        * type: \dependency
+          config:
+            values: <[工作坊]>
+            is-required: true
+            visible: true
+            targets: <[
+              sect-workshop
+              workshop_length
+              workshop_intro
+              workshop_suitable
+              workshop_equipment
+            ]>
+      ]
 
   "participate_format":
     type: \@makeform/choice
@@ -189,7 +221,7 @@ fields = {} <<<
     type: \@makeform/radio
     meta:
       title: "講者名稱"
-      is-required: true
+      is-required: false
       config:
         values: [
           "同投稿者"
@@ -200,37 +232,37 @@ fields = {} <<<
   "panel_speaker_1":
     meta:
       title: "講者1稱呼"
-      is-required: true
+      is-required: false
       term: [{opset: \length, enabled: true, op: \lte, msg: '太長了', config: val: 100}]
 
   "panel_speaker_1_affilation":
     meta:
       title: "講者1服務單位與職稱"
-      is-required: true
+      is-required: false
       term: [{opset: \length, enabled: true, op: \lte, msg: '太長了', config: val: 100}]
 
   "panel_speaker_2":
     meta:
       title: "講者2稱呼"
-      is-required: true
+      is-required: false
       term: [{opset: \length, enabled: true, op: \lte, msg: '太長了', config: val: 100}]
 
   "panel_speaker_2_affilation":
     meta:
       title: "講者2服務單位與職稱"
-      is-required: true
+      is-required: false
       term: [{opset: \length, enabled: true, op: \lte, msg: '太長了', config: val: 100}]
 
   "panel_speaker_3":
     meta:
       title: "講者3稱呼"
-      is-required: true
+      is-required: false
       term: [{opset: \length, enabled: true, op: \lte, msg: '太長了', config: val: 100}]
 
   "panel_speaker_3_affilation":
     meta:
       title: "講者3服務單位與職稱"
-      is-required: true
+      is-required: false
       term: [{opset: \length, enabled: true, op: \lte, msg: '太長了', config: val: 100}]
 
   "panel_note":
@@ -244,7 +276,7 @@ fields = {} <<<
     type: \@makeform/choice
     meta:
       title: "請告知工作坊的時長"
-      is-required: true
+      is-required: false
       config:
         values: [
           "30 分鐘"
@@ -257,7 +289,7 @@ fields = {} <<<
     meta:
       title: "請簡述這個工作坊的活動流程"
       term: [{opset: \length, enabled: true, op: \lte, msg: '太長了', config: val: 500, method: \simple-word}]
-      is-required: true
+      is-required: false
       config:
         show-markdown-option: true
         limitation: \上限500字
@@ -265,12 +297,13 @@ fields = {} <<<
   "workshop_suitable":
     meta:
       title: "請告知工作坊的適合人數區間"
-      is-required: true
+      is-required: false
       term: [{opset: \length, enabled: true, op: \lte, msg: '太長了', config: val: 100}]
 
   "workshop_equipment":
     meta:
       title: "請告知會需要主辦單位準備之器材"
+      is-required: false
       term: [{opset: \length, enabled: true, op: \lte, msg: '太長了', config: val: 100}]
       config:
         note: ["目前根據場地，我們會為每個工作坊的議程準備投影機、螢幕、麥克風，其餘器材不保證能夠提供，建議自備"]
