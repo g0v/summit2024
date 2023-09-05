@@ -67,14 +67,110 @@ fields = {} <<<
           "基於同理心、涵容、多元性的數位基礎建設"
           "技術與議題的交鋒"
         ]
+      plugin: [
+      * type: \dependency
+        config:
+          values: ["Nerd Politics v.s. 數位治理"]
+          is-required: true
+          visible: true
+          targets: <[keywords_1]>
+      * type: \dependency
+        config:
+          values: ["資料、人工智慧與社群協作"]
+          is-required: true
+          visible: true
+          targets: <[keywords_2]>
+      * type: \dependency
+        config:
+          values: ["草根、開放、多中心的公民社群如何回應政治與科技的極權"]
+          is-required: true
+          visible: true
+          targets: <[keywords_3]>
+      * type: \dependency
+        config:
+          values: ["基於同理心、涵容、多元性的數位基礎建設"]
+          is-required: true
+          visible: true
+          targets: <[keywords_4]>
+      * type: \dependency
+        config:
+          values: ["技術與議題的交鋒"]
+          is-required: true
+          visible: true
+          targets: <[keywords_5]>
+      ]
 
-  "keywords":
+  "keywords_1":
+    type: \@makeform/checkbox
     meta:
-      title: "請選擇與你投稿內容相關連之 g0v Summit 2024 之關鍵字"
-      term: [{opset: \length, enabled: true, op: \lte, msg: '太長了', config: val: 100}]
+      title: "Nerd Politics v.s. 數位治理"
       is-required: true
       config:
-        note: ["可以參考本段落上方之說明"]
+        value: [
+          "eID"
+          "個人資料保護"
+          "AI 科技規範"
+          "數位平台規管"
+          "數位性暴力"
+          "數位主權"
+        ]
+
+  "keywords_2":
+    type: \@makeform/checkbox
+    meta:
+      title: "資料、人工智慧與社群協作"
+      is-required: true
+      config:
+        value: [
+          "開放政府"
+          "大數據(資料治理)"
+          "群眾外包"
+          "地圖資料"
+          "開放課程"
+        ]
+
+  "keywords_3":
+    type: \@makeform/checkbox
+    meta:
+      title: "草根、開放、多中心的公民社群如何回應政治與科技的極權"
+      is-required: true
+      config:
+        value: [
+          "社群治理"
+          "數位韌性"
+          "公民倡議"
+          "數位民防"
+          "開源精神"
+        ]
+
+  "keywords_4":
+    type: \@makeform/checkbox
+    meta:
+      title: "基於同理心、涵容、多元性的數位基礎建設"
+      is-required: true
+      config:
+        value: [
+          "網路禮儀"
+          "CoC"
+          "數位兩極化"
+          "數位 DEI（多元共融）"
+          "數位素養"
+        ]
+
+  "keywords_5":
+    type: \@makeform/checkbox
+    meta:
+      title: "技術與議題的交鋒"
+      is-required: true
+      config:
+        value: [
+          "SDG"
+          "社會企業"
+          "數位轉型"
+          "創新創業"
+          "教育"
+          "非營利組織"
+        ]
 
   "email":
     meta:
@@ -92,14 +188,6 @@ fields = {} <<<
       config:
         note: ["將作為我們講者介紹的資訊"]
 
-  "realname":
-    meta:
-      title: "您的姓名"
-      is-required: true
-      term: [{opset: \length, enabled: true, op: \lte, msg: '太長了', config: val: 100}]
-      config:
-        note: ["除非您願意被本名稱呼，否則我們並不會公開，僅將其作為聯繫與確認之用"]
-  
   "name":
     meta:
       title: "我們應該如何稱呼您"
