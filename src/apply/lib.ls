@@ -17,7 +17,7 @@ window.lib = ({def, i18n}) ->
         pic: _(form["name"])
       contact:
         email: form["email"]
-        name: form["realname"]
+        name: form["name"]
         mobile: ''
         title: form["affiliation"]
         addr: ''
