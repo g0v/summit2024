@@ -175,6 +175,12 @@ fields = {} <<<
       plugin: [
         * type: \dependency
           config:
+            values: <[演講 工作坊 主題論壇]>
+            is-required: true
+            visible: true
+            targets: <[participate_format]>
+        * type: \dependency
+          config:
             values: <[演講 工作坊]>
             is-required: true
             visible: true
@@ -186,7 +192,6 @@ fields = {} <<<
             visible: true
             targets: <[
               sect-panel
-              panel_note
               panel_speaker_1 panel_speaker_1_affilation
               panel_speaker_2 panel_speaker_2_affilation
               panel_speaker_3 panel_speaker_3_affilation

@@ -21,25 +21,26 @@ div
         span(t="必填項目提示.0")
         span.mx-2 #[span.text-danger.font-weight-bold *]
         span(t="必填項目提示.1")
-    .sect.view-only
+    .sect.view-hide
       +widget("agreement_accept")
       +widget("agreement_no_short")
     .sect
+      div(t="本區段會包含投稿與講者資訊的相關問題")
       +widget("title_zh")
       +widget("title_en")
       +widget("description_zh")
       +widget("description_en")
       +widget("theme")
       +widget("keywords")
-      .view-only: +widget("email")
+      .view-hide: +widget("email")
       +widget("affiliation")
-      .view-only: +widget("realname")
+      .view-hide: +widget("realname")
       +widget("name")
       +widget("social_link")
-      +widget("time_attend")
+      .view-hide: +widget("time_attend")
       +widget("language")
-      +widget("visa_assistance")
-      +widget("diverse_traits")
+      .view-hide: +widget("visa_assistance")
+      .view-hide: +widget("diverse_traits")
       +widget("event_format")
     .sect.sect-speech
       +widget("participate_format")
@@ -57,12 +58,12 @@ div
       +widget("workshop_length")
       +widget("workshop_intro")
       +widget("workshop_suitable")
-      +widget("workshop_equipment")
+      .view-hide: +widget("workshop_equipment")
       //-+widget("participate_format")
       //-+widget("speach_speaker")
     .sect
-      +widget("where_get")
-      +widget("something_to_say")
+      .view-hide: +widget("where_get")
+      .view-hide: +widget("something_to_say")
 
     .sect.embed-hide.view-hide
       .btn.btn-primary.btn-lg.px-4(t,ld="submit") 送件
