@@ -15,7 +15,7 @@ function buildSass() {
     .pipe(connect.reload());
 }
 
-function buildPug() {
+function buildPug(baseurl="/") {
   let build_time = new Date().getTime();
   gulp.src('src/pug/**/index.pug')
     .pipe(data((file) => {
