@@ -33,12 +33,13 @@ div
       +widget("description_en")
       +widget("theme")
       .border-left.ml-5.px-4.py-3
-        div(t="請選擇與你投稿內容相關連之 g0v Summit 2024 之關鍵字")
+        .mb-4(t="請選擇與你投稿內容相關連之 g0v Summit 2024 之關鍵字")
         div(ld="visibility",data-name="keywords_1"): +widget("keywords_1")
         div(ld="visibility",data-name="keywords_2"): +widget("keywords_2")
         div(ld="visibility",data-name="keywords_3"): +widget("keywords_3")
         div(ld="visibility",data-name="keywords_4"): +widget("keywords_4")
         div(ld="visibility",data-name="keywords_5"): +widget("keywords_5")
+    .sect
       .view-hide: +widget("email")
       +widget("affiliation")
       +widget("name")

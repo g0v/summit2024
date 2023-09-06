@@ -4,3 +4,4 @@ secret.*
 .*.swp
 .DS_Store
 _public/
+_main/
