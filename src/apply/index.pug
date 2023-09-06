@@ -22,10 +22,9 @@ div
         span.mx-2 #[span.text-danger.font-weight-bold *]
         span(t="必填項目提示.1")
     .sect.view-hide
-      .mb-2
-        .d-none(ld="for-lng", data-lng="zh") 中文說明
-        .d-none(ld="for-lng", data-lng="en") English Description
-      .p-4.mb-5.border(style="white-space: pre-line;", t="這裡是 g0v Summit 2024 Call for Paper 的表單")
+      .p-4.mb-5.border
+        .d-none(ld="for-lng", data-lng="zh"): include ./doc/claiming.zh.pug
+        .d-none(ld="for-lng", data-lng="en"): include ./doc/claiming.en.pug
       +widget("agreement_accept")
       +widget("agreement_no_short")
     .sect
