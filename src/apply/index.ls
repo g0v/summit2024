@@ -15,6 +15,7 @@ mod = ({root, ctx, t, pubsub, manager, bi, i18n}) ->
     block.i18n.add-resource-bundle \en, "", i18n-res.en, true, true
     block.i18n.add-resource-bundle \zh-TW, "", i18n-res["zh-TW"], true, true
     bi.transform \i18n
+    block.i18n.module.on \languageChanged, ~> @_ldview.render!
     @_ldview = view = new ldview do
       init-render: false
       root: root
