@@ -1,13 +1,15 @@
 window.lib = ({def, i18n}) ->
-  fields: fields
-  mask: public:
-    email: false
-    time_attend: false
-    visa_assistance: false
-    diverse_traits: false
-    workshop_equipment: false
-    where_get: false
-    something_to_say: false
+  fields: open: fields
+  /*
+  mask: view:
+    email: true
+    time_attend: true
+    visa_assistance: true
+    diverse_traits: true
+    workshop_equipment: true
+    where_get: true
+    something_to_say: true
+  */
   idx: ({prj}) ->
     idx = (prj.system or {}).idx
     if !(idx?) => \???

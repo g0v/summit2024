@@ -173,6 +173,7 @@ fields = {} <<<
         ]
 
   "email":
+    scenes: view: false
     meta:
       title: "您的電子郵件"
       is-required: true
@@ -207,6 +208,7 @@ fields = {} <<<
 
   "time_attend":
     type: \@makeform/checkbox
+    scenes: view: false
     meta:
       title: "可參加時間"
       is-required: true
@@ -233,6 +235,7 @@ fields = {} <<<
 
   "visa_assistance":
     type: \@makeform/radio
+    scenes: view: false
     meta:
       title: "是否需要協助簽證"
       is-required: true
@@ -243,6 +246,7 @@ fields = {} <<<
         ]
 
   "diverse_traits":
+    scenes: view: false
     meta:
       title: "請簡述您所具有之多元特質"
       is-required: true
@@ -411,6 +415,7 @@ fields = {} <<<
       term: [{opset: \length, enabled: true, op: \lte, msg: '太長了', config: val: 100}]
 
   "workshop_equipment":
+    scenes: view: false
     meta:
       title: "請告知會需要主辦單位準備之器材"
       is-required: false
@@ -419,6 +424,7 @@ fields = {} <<<
         note: ["目前根據場地，我們會為每個工作坊的議程準備投影機、螢幕、麥克風，其餘器材不保證能夠提供，建議自備"]
 
   "where_get":
+    scenes: view: false
     type: \@makeform/checkbox
     meta:
       title: "您是從哪裡得到 g0v Summit 2024 相關資訊的"
@@ -440,5 +446,6 @@ fields = {} <<<
 
   "something_to_say":
     type: \@makeform/textarea
+    scenes: view: false
     meta:
       title: "其他想對 g0v Summit 2024 說的話"

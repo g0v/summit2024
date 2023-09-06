@@ -207,6 +207,9 @@ fields = {
     }
   },
   "email": {
+    scenes: {
+      view: false
+    },
     meta: {
       title: "您的電子郵件",
       isRequired: true,
@@ -279,6 +282,9 @@ fields = {
   },
   "time_attend": {
     type: '@makeform/checkbox',
+    scenes: {
+      view: false
+    },
     meta: {
       title: "可參加時間",
       isRequired: true,
@@ -302,6 +308,9 @@ fields = {
   },
   "visa_assistance": {
     type: '@makeform/radio',
+    scenes: {
+      view: false
+    },
     meta: {
       title: "是否需要協助簽證",
       isRequired: true,
@@ -311,6 +320,9 @@ fields = {
     }
   },
   "diverse_traits": {
+    scenes: {
+      view: false
+    },
     meta: {
       title: "請簡述您所具有之多元特質",
       isRequired: true,
@@ -559,6 +571,9 @@ fields = {
     }
   },
   "workshop_equipment": {
+    scenes: {
+      view: false
+    },
     meta: {
       title: "請告知會需要主辦單位準備之器材",
       isRequired: false,
@@ -577,6 +592,9 @@ fields = {
     }
   },
   "where_get": {
+    scenes: {
+      view: false
+    },
     type: '@makeform/checkbox',
     meta: {
       title: "您是從哪裡得到 g0v Summit 2024 相關資訊的",
@@ -591,6 +609,9 @@ fields = {
   },
   "something_to_say": {
     type: '@makeform/textarea',
+    scenes: {
+      view: false
+    },
     meta: {
       title: "其他想對 g0v Summit 2024 說的話"
     }
@@ -600,18 +621,19 @@ window.lib = function(arg$){
   var def, i18n;
   def = arg$.def, i18n = arg$.i18n;
   return {
-    fields: fields,
-    mask: {
-      'public': {
-        email: false,
-        time_attend: false,
-        visa_assistance: false,
-        diverse_traits: false,
-        workshop_equipment: false,
-        where_get: false,
-        something_to_say: false
-      }
-    },
+    fields: {
+      open: fields
+    }
+    /*
+    mask: view:
+      email: true
+      time_attend: true
+      visa_assistance: true
+      diverse_traits: true
+      workshop_equipment: true
+      where_get: true
+      something_to_say: true
+    */,
     idx: function(arg$){
       var prj, idx;
       prj = arg$.prj;

@@ -41,8 +41,7 @@ mod = ({root, ctx, t, pubsub, manager, bi, i18n}) ->
       visible = if !visible => !active else active
       for tgt in targets =>
         @{}_visibility[tgt] = visible
-        if !fields[tgt] => continue
-        o = fields[tgt].itf
+        if !(fields[tgt] and (o = fields[tgt].itf)) => continue
         c = o.serialize!
         c.is-required = active
         o.deserialize c

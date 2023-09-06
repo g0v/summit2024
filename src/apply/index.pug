@@ -42,14 +42,14 @@ div
         div(ld="visibility",data-name="keywords_4"): +widget("keywords_4")
         div(ld="visibility",data-name="keywords_5"): +widget("keywords_5")
     .sect
-      .view-hide: +widget("email")
+      +widget("email")
       +widget("affiliation")
       +widget("name")
       +widget("social_link")
-      .view-hide: +widget("time_attend")
+      +widget("time_attend")
       +widget("language")
-      .view-hide: +widget("visa_assistance")
-      .view-hide: +widget("diverse_traits")
+      +widget("visa_assistance")
+      +widget("diverse_traits")
       +widget("event_format")
       .border-left.ml-5.px-4.py-3
         .sect-speech
@@ -68,10 +68,10 @@ div
           +widget("workshop_length")
           +widget("workshop_intro")
           +widget("workshop_suitable")
-          .view-hide: +widget("workshop_equipment")
-    .sect
-      .view-hide: +widget("where_get")
-      .view-hide: +widget("something_to_say")
+          +widget("workshop_equipment")
+    .sect.view-hide
+      +widget("where_get")
+      +widget("something_to_say")
 
     .sect.embed-hide.view-hide
       .btn.btn-primary.btn-lg.px-4(t,ld="submit") 送件
