@@ -2,6 +2,11 @@ window.lib = function(arg$){
   var def, i18n;
   def = arg$.def, i18n = arg$.i18n;
   return {
+    mask: {
+      'public': {
+        email: false
+      }
+    },
     idx: function(arg$){
       var prj, idx;
       prj = arg$.prj;

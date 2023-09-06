@@ -1,4 +1,5 @@
 window.lib = ({def, i18n}) ->
+  mask: public: email: false
   idx: ({prj}) ->
     idx = (prj.system or {}).idx
     if !(idx?) => \???
