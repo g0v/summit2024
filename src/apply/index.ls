@@ -5,23 +5,26 @@ module.exports =
     dependencies: [ {name: "ldview"} ]
     i18n: en: i18n-res.en, "zh-TW": i18n-res["zh-TW"]
   init: ({root, ctx, manager, pubsub, i18n, t}) ->
-    pubsub.fire \init, mod({root, ctx, t, pubsub, manager, bi: @_instance})
+    pubsub.fire \init, mod({root, ctx, t, pubsub, manager, i18n, bi: @_instance})
 
-mod = ({root, ctx, t, pubsub, manager, bi}) ->
+mod = ({root, ctx, t, pubsub, manager, bi, i18n}) ->
   info: subset: "open", fields: fields
-  render: ->
+  render: -> @_ldview.render!
   init: (base) ->
     @formmgr = base.formmgr
     block.i18n.add-resource-bundle \en, "", i18n-res.en, true, true
     block.i18n.add-resource-bundle \zh-TW, "", i18n-res["zh-TW"], true, true
     bi.transform \i18n
-
     @_ldview = view = new ldview do
       init-render: false
       root: root
-      handler: visibility: ({node}) ~>
-        name = node.getAttribute \data-name
-        node.classList.toggle \d-none, !(@{}_visibility[name])
+      handler:
+        visibility: ({node}) ~>
+          name = node.getAttribute \data-name
+          node.classList.toggle \d-none, !(@{}_visibility[name])
+        "for-lng": ({node}) ~>
+          show = (i18n.get-language! or '').indexOf(node.getAttribute(\data-lng)) == 0
+          node.classList.toggle \d-none, !show
 
     @formmgr.on \change, debounce 350, ~> @optin!
     @optin!

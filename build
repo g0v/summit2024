@@ -3,7 +3,8 @@ bin=./node_modules/.bin
 rm -rf dist
 mkdir -p dist/apply/img/
 echo "build lib script ..."
-$bin/lsc -cbp --no-header src/apply/lib.ls > dist/apply/lib.js
+$bin/lsc -cbp --no-header src/apply/fields.ls > dist/apply/lib.js
+$bin/lsc -cbp --no-header src/apply/lib.ls >> dist/apply/lib.js
 $bin/uglifyjs dist/apply/lib.js -m -c > dist/apply/lib.min.js
 echo "build pug files to html files ..."
 echo "index.pug ..."
