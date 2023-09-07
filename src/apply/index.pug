@@ -17,12 +17,12 @@ div
       h1 #[span.text-sm(t="title.year")]#[br]#[span(t="title.name")]
       p.text-muted(t="title.date")
       hr
-      p
+      div
         span(t="必填項目提示.0")
         span.mx-2 #[span.text-danger.font-weight-bold *]
         span(t="必填項目提示.1")
     .sect.view-hide
-      .p-4.mb-5.border
+      .p-4.mb-5.border.shadow-sm
         .d-none(ld="for-lng", data-lng="zh"): include ./doc/claiming.zh.pug
         .d-none(ld="for-lng", data-lng="en"): include ./doc/claiming.en.pug
       +widget("agreement_accept")
