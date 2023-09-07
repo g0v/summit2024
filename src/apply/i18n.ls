@@ -1,5 +1,6 @@
 i18n-res =
   en:
+    "after-publish": "Application will be public after submitted except sensitive fields."
     "必填項目提示": [
       "Please fill in all boxes marked with"
       ""
@@ -120,6 +121,7 @@ i18n-res =
     "其他想對 g0v Summit 2024 說的話": "Any other thoughts for g0v Summit 2024"
 
   "zh-TW":
+    "after-publish": "送件後案件將公開展示。機敏欄位則保持隱藏。"
     "必填項目提示": [
       "標示為"
       "者為必填項目。"

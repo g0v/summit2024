@@ -73,7 +73,7 @@ div
       +widget("where_get")
       +widget("something_to_say")
 
-    .sect.embed-hide.view-hide
+    .sect.embed-hide.view-hide(ld="is-editable")
       .btn.btn-primary.btn-lg.px-4(t,ld="submit") 送件
-      .my-2: .text-danger.text-sm * #[span(t) 送件後無法再修改]
+      .my-2: .text-danger.text-sm * #[span(t="after-publish")]
     +nbr(4)
