@@ -13,6 +13,7 @@ $bin/srcbuild-pug src/apply/index.pug > dist/apply/index.html
 echo "copy image files"
 cp src/apply/img/*.svg dist/apply/img/
 cp src/apply/img/*.jpg dist/apply/img/
+cp src/apply/img/*.png dist/apply/img/
 echo "copy dist into static folder..."
 rm -rf web/static/assets/lib/block/main/
 mkdir -p web/static/assets/lib/block/main/
