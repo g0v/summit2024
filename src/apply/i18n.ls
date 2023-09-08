@@ -8,7 +8,7 @@ i18n-res =
     title:
       year: "2024"
       name: "g0v summit"
-      date: "Asia Taipei 2023/01/01 06:00:00 - 2023/12/31 17:00:00 (Taipei Time)"
+      date: "Asia Taipei 2023/09/10 06:00 - 2023/12/10 23:59 (Taipei Time)"
     "zh": "Mandarin"
     "en": "English"
     "是": "Yes"
@@ -129,7 +129,7 @@ i18n-res =
     title:
       year: "2024"
       name: "g0v 高峰會"
-      date: "報名期間：台灣時間 2023 年 1 月 1 日 06:00 至 12 月 31 日 17:00 止"
+      date: "報名期間：台灣時間 2023 年 9 月 10 日 06:00 至 12 月 10 日 23:59 止"
     "zh": "華文"
     "en": "英文"
     "是": "是"
