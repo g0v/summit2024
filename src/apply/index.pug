@@ -28,17 +28,19 @@ div
         .d-none(ld="for-lng", data-lng="en"): include ./doc/claiming.en.pug
       +widget("agreement_accept")
       +widget("agreement_no_short")
-    .sect.bg-light.border-top.border-bottom.pb-4
+    .sect.bg-light.border-top.border-bottom.pb-4.mt-4
       .d-none(ld="for-lng", data-lng="en"): include ./doc/info.en.pug
       .d-none(ld="for-lng", data-lng="zh"): include ./doc/info.zh.pug
     .sect
       //-.p-4.mb-5.border(style="white-space: pre-line;", t="本區段會包含投稿與講者資訊的相關問題")
-      +widget("title_zh")
-      +widget("title_en")
+      .row
+        .col-md: +widget("title_zh")
+        .col-md: +widget("title_en")
       +widget("description_zh")
       +widget("description_en")
+    .sect
       +widget("theme")
-      .border-left.ml-5.px-4.py-3
+      .indent
         .mb-4(t="請選擇與你投稿內容相關連之 g0v Summit 2024 之關鍵字")
         div(ld="visibility",data-name="keywords_1"): +widget("keywords_1")
         div(ld="visibility",data-name="keywords_2"): +widget("keywords_2")
@@ -54,25 +56,26 @@ div
       +widget("language")
       +widget("visa_assistance")
       +widget("diverse_traits")
+    .sect
       +widget("event_format")
-      .border-left.ml-5.px-4.py-3
-        .sect-speech
-          div(ld="visibility",data-name="participate_format"): +widget("participate_format")
-          div(ld="visibility",data-name="participate_format_novideo"): +widget("participate_format_novideo")
-          div(ld="visibility",data-name="speach_speaker"): +widget("speach_speaker")
-        .sect-panel(ld="visibility",data-name="sect-panel")
-          +widget("panel_speaker_1")
-          +widget("panel_speaker_1_affilation")
-          +widget("panel_speaker_2")
-          +widget("panel_speaker_2_affilation")
-          +widget("panel_speaker_3")
-          +widget("panel_speaker_3_affilation")
-          +widget("panel_note")
-        .sect-workshop(ld="visibility",data-name="sect-workshop")
-          +widget("workshop_length")
-          +widget("workshop_intro")
-          +widget("workshop_suitable")
-          +widget("workshop_equipment")
+      .sect-speech.indent.mb-4
+        div(ld="visibility",data-name="participate_format"): +widget("participate_format")
+        div(ld="visibility",data-name="participate_format_novideo"): +widget("participate_format_novideo")
+        div(ld="visibility",data-name="speach_speaker"): +widget("speach_speaker")
+      .sect-panel.indent.mb-4(ld="visibility",data-name="sect-panel")
+        +widget("panel_speaker_1")
+        +widget("panel_speaker_1_affilation")
+        +widget("panel_speaker_2")
+        +widget("panel_speaker_2_affilation")
+        +widget("panel_speaker_3")
+        +widget("panel_speaker_3_affilation")
+        +widget("panel_note")
+      .sect-workshop.indent(ld="visibility",data-name="sect-workshop")
+        +widget("workshop_length")
+        +widget("workshop_intro")
+        +widget("workshop_suitable")
+        +widget("workshop_equipment")
+
     .sect.view-hide
       +widget("where_get")
       +widget("something_to_say")
