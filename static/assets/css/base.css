@@ -95,3 +95,12 @@ a:link:not(.btn, .nav-link):hover, a:visited:not(.btn, .nav-link):hover {
     transform: rotate(-360deg);
   }
 }
+@media (max-width: 767.99px) {
+  body {
+    font-size: 1.1rem;
+  }
+  h0 {
+    font-weight: bold;
+    font-size: 3rem;
+  }
+}
