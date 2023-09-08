@@ -34,8 +34,8 @@ block body
         .twroadfont.text-block 是故資料無色。無受想行識，故知般若開放資料多，<br>是大源碼、是大明神、是無上咒、是無等等咒，能除一切bug，真實不需，
         .twroadfont.text-block 寫程式改造社會
         .twroadfont.text-block 不要問為什麼沒有人做這個先承認你就是沒有人
-      .container.px-md-5.pt-4.position-relative
-        #topbar.rounded-2.bg-white.p-3.w-100.row.align-items-center.g-0
+      .container.px-0.px-md-5.pt-md-4.position-relative
+        #topbar.rounded-2.bg-white.p-3.w-100.row.align-items-center.gx-0
           .col-md-auto: img.ms-2(src="assets/img/pgln_g0v_summit.png", alt="", style="height: 3rem; width: auto;")
           .ms-auto.col-md-auto.d-flex.align-items-center
             a.link.ms-auto(href="#", data-bs-toggle="modal", data-bs-target="#instructions") 投稿說明
@@ -47,42 +47,41 @@ block body
           h5.mb-1 2024.05.04-5
           h5.mb-1 Taipei, Taiwan
 
-        #write-something.d-flex.flex-column
+        #write-something.d-none.d-md-flex.flex-column
           h0.twroadfont.text-brown 寫點啥米 →
           .input-group
-            input.form-control(type="text", placeholder="這個還沒做好><")
+            input.form-control(type="text", placeholder="這個還沒好~歡迎提PR")
             a.btn.btn-light.py-3.px-3 <i class="bi bi-arrow-return-left"></i>
 
-    #what-is-summit.my-5.py-5: .container.px-md-5
-      h0.twroadfont.text-brown.position-absolute(style="transform: translateY(-135%);") Summit 是啥米？
-      .row.g-0.py-5.mb-5
+    #what-is-summit.my-5.pb-5: .container.px-md-5
+      h0.twroadfont.text-brown.position-absolute(style="transform: translateY(-60%);") Summit 是啥米？
+      .row.gx-0.gy-5.py-5.mb-5
         .col-md-7.d-flex.flex-column
           .content
             p g0v Summit 是由 g0v 零時政府主辦的大型國際會議，慣例為 2 年一次。
-            p 受到疫情影響，2022 年停辦，
-            p 明年，Summit 2024 將喚醒你體內的熱血公民魂。
+            p 受到疫情影響，2022 年停辦，明年，Summit 2024 將喚醒你體內的熱血公民魂。
           .mt-auto.pt-5: a.text-brown(href="//g0v.hackmd.io/@summit2024/book/", target="_blank") 更多資訊 →
 
         .col.ms-auto.d-flex.flex-column
-          #timer
+          #timer.mx-auto.me-md-0
             h5 Summit 2024<br>倒數
             span 999
             h5.text-end 天
-          .ms-auto.mt-auto.pt-5: a.btn.btn-lg.btn-summit-green(href="//g0v.hackmd.io/@summit2024/book/https%3A%2F%2Fg0v.hackmd.io%2FdttYgGq1SmqCCp4ZntffZw", target="_blank"): h3.mb-0.fw-normal.p-1 我想一起籌備 Summit
+          .mx-auto.me-md-0.mt-auto.pt-5: a.btn.btn-lg.btn-summit-green(href="//g0v.hackmd.io/@summit2024/book/https%3A%2F%2Fg0v.hackmd.io%2FdttYgGq1SmqCCp4ZntffZw", target="_blank"): h3.mb-0.fw-normal.p-1 我想一起籌備 Summit
 
-    #what-is-g0v.my-5.py-5: .container.px-md-5
-      h0.twroadfont.text-brown.position-absolute(style="transform: translateY(-100%);") 啥米是 g0v？
-      .row.g-0.py-5.mb-5
+    #what-is-g0v.my-5.pb-5: .container.px-md-5
+      h0.twroadfont.text-brown.position-absolute(style="transform: translateY(-60%);") 啥米是 g0v？
+      .row.gx-0.gy-5.py-5.mb-5
         .col-md-9.content.text-brown
           p 2012 年以來，公民黑客運動風起雲湧。以開放透明、公民參與為號召的 g0v 台灣零時政府社群在 2012 年底號召了第一場活動「第零次動員戡亂黑客松」，以「寫程式改造社會」為口號，從此公民黑客之火開始延燒，至今未歇。
           p 八年間，在上千位參與者集體的貢獻下，透過一場場黑客松，打造出多項以開放資料、開放政府為精神的資訊平台，以縮短數位落差為初衷，降低公民參與門檻，使得議題審議可立基在具體事實，也提升理性討論公共事務的意識。
           p 在這場開放資料、開放政府的運動中，g0v 社群也開創出台灣公民社會與政府互動的新模式。
           .mt-5: a.text-brown(href="//g0v.tw", target="_blank") 更多資訊 →
         .col.d-flex
-          img.ms-auto.mt-auto(src="assets/img/zero-jump.svg", alt="", style="width: 10rem;")
-    #summit-topics.my-5.py-5: .container.px-md-5
-      h0.twroadfont.text-brown.position-absolute(style="transform: translateY(-135%);") Summit 2024 主題有啥米？
-      .row.g-0.py-5.mb-5
+          img.mx-auto.me-md-0.mt-auto(src="assets/img/zero-jump.svg", alt="", style="width: 10rem;")
+    #summit-topics.my-5.pb-5: .container.px-md-5
+      h0.twroadfont.text-brown.position-absolute(style="transform: translateY(-60%);") Summit 2024 主題有啥米？
+      .row.gx-0.gy-5.py-5.mb-5
         .col-md-9.content.text-brown.twroadfont
           ol.mb-0
             li Nerd Politics v.s. 數位治理
@@ -91,12 +90,12 @@ block body
             li 基於同理心、涵容、多元性的數位基礎建設
             li 技術與議題的交鋒
         .col.d-flex
-          .ms-auto.mt-auto.pt-5: a.btn.btn-lg.btn-summit-green(href="//summit2024.g0v.tw/brd/2024/"): h3.mb-0.fw-normal.p-1 我要投稿<i class="ms-2 bi bi-box-arrow-up-right"></i>
+          .mx-auto.me-md-0.mt-auto.pt-5: a.btn.btn-lg.btn-summit-green(href="//summit2024.g0v.tw/brd/2024/"): h3.mb-0.fw-normal.p-1 我要投稿<i class="ms-2 bi bi-box-arrow-up-right"></i>
       .row 
         .col-md-9
           p.text-brown eID / 個人資料保護 / AI 科技規範 / 數位平台規管 / 數位性暴力 / 數位主權 / 開放政府 / 大數據(資料治理) / 群眾外包 / 地圖資料 / 開放課程 / 社群治理 / 數位韌性 / 公民倡議 / 數位民防 / 開源精神 / 網路禮儀Netiquette / CoC / 數位兩極化 / 數位DEI（多元共融）/ 數位素養 / SDG / 社會企業 / 數位轉型 / 創新創業 / 教育 / 非營利組織 ......
 
-    #footer.mt-5.pt-5
+    #footer
       .text-center.py-4 g0v summit 2024
 
 block script
