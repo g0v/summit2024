@@ -24,6 +24,7 @@ block body
         .modal-body.p-4
           include ../component/claiming.en.pug
   main
+    a.btn.btn-outline-dark#lan(href="/") 中/EN
     #top-block.w-100
       #cloud
         .twroadfont.text-block 革命不是請客吃飯，選舉不是投票凍蒜。
@@ -34,13 +35,13 @@ block body
         .twroadfont.text-block 是故資料無色。無受想行識，故知般若開放資料多，<br>是大源碼、是大明神、是無上咒、是無等等咒，能除一切bug，真實不需，
         .twroadfont.text-block 寫程式改造社會
         .twroadfont.text-block 不要問為什麼沒有人做這個先承認你就是沒有人
-      .container.px-md-5.pt-4.position-relative
-        #topbar.rounded-2.bg-white.p-3.w-100.row.align-items-center.g-0
+      .container.px-0.px-md-5.pt-md-4.position-relative
+        #topbar.rounded-2.bg-white.p-3.w-100.row.align-items-center.gx-0
           .col-md-auto: img.ms-2(src="../assets/img/pgln_g0v_summit.png", alt="", style="height: 3rem; width: auto;")
           .ms-auto.col-md-auto.d-flex.align-items-center
             a.link.ms-auto(href="#", data-bs-toggle="modal", data-bs-target="#instructions") About Call For Paper
             a.link.ms-4(href="#", data-bs-toggle="modal", data-bs-target="#claiming") About Personal Data Collection
-            a.btn.btn-lg.btn-summit-green.ms-4.me-auto Submit<i class="ms-2 bi bi-box-arrow-up-right"></i>
+            a.btn.btn-lg.btn-summit-green.ms-4.me-auto(href="//summit2024.g0v.tw/brd/2024/") Submit<i class="ms-2 bi bi-box-arrow-up-right"></i>
 
         #main-text.text-end.text-light.mt-5.me-3
           h2.mb-1 summit 2024
@@ -53,9 +54,9 @@ block body
             input.form-control(type="text", placeholder="not done yet ><")
             a.btn.btn-light.py-3.px-3 <i class="bi bi-arrow-return-left"></i>
 
-    #what-is-summit.my-5.py-5: .container.px-md-5
-      h0.twroadfont.text-brown.position-absolute(style="transform: translateY(-135%);") What is g0v Summit?
-      .row.g-0.py-5.mb-5
+    #what-is-summit.my-5.pb-5: .container.px-md-5
+      h0.twroadfont.text-brown.position-absolute(style="transform: translateY(-60%);") What is g0v Summit?
+      .row.gx-0.gy-5.py-5.mb-5
         .col-md-7.d-flex.flex-column
           .content
             p g0v Summit is a biennial conference held once in two years in Taiwan.
@@ -64,25 +65,25 @@ block body
           .mt-auto.pt-5: a.text-brown(href="//g0v.hackmd.io/@summit2024/book/", target="_blank") More →
 
         .col.ms-auto.d-flex.flex-column
-          #timer
+          #timer.mx-auto.me-md-0
             h5 Summit 2024<br>in
             span 999
             h5.text-end days
-          .ms-auto.mt-auto.pt-5: a.btn.btn-lg.btn-summit-green(href="//g0v.hackmd.io/@summit2024/book/", target="_blank"): h3.mb-0.fw-normal.p-1 Work for Summit
+          .mx-auto.me-md-0.mt-auto.pt-5: a.btn.btn-lg.btn-summit-green(href="//g0v.hackmd.io/@summit2024/book/https%3A%2F%2Fg0v.hackmd.io%2FdttYgGq1SmqCCp4ZntffZw", target="_blank"): h3.mb-0.fw-normal.p-1 Work for Summit
 
-    #what-is-g0v.my-5.py-5: .container.px-md-5
-      h0.twroadfont.text-brown.position-absolute(style="transform: translateY(-100%);") What is g0v?
-      .row.g-0.py-5.mb-5
+    #what-is-g0v.my-5.pb-5: .container.px-md-5
+      h0.twroadfont.text-brown.position-absolute(style="transform: translateY(-60%);") What is g0v?
+      .row.gx-0.gy-5.py-5.mb-5
         .col-md-9.content.text-brown
           p Since 2012, the civic hacking movement has been sweeping across the globe. g0v, a community that advocates open source, information transparenc, and civic participation, launched its first event “hackath0n” at the end of 2012 with the slogan “Code to refactor society.” The movement of civic hacking has continued ever since.
           p Over the past 8 years, thousands of participants have joined g0v hackathons and created tools and platforms that promote open data and open government. Many g0vers have created these tools to reduce the digital divide and facilitate access to public information for everyone, so that awareness of public affairs can be raised, and that deliberation and decision-making can be fact-bassed.
           p In this global movement of open data and open government, g0v community has created a new model for the citizens and government officials to interact, communicate, and collaborate together.
           .mt-5: a.text-brown(href="//g0v.tw", target="_blank") More →
         .col.d-flex
-          img.ms-auto.mt-auto(src="../assets/img/zero-jump.svg", alt="", style="width: 10rem;")
-    #summit-topics.my-5.py-5: .container.px-md-5
-      h0.twroadfont.text-brown.position-absolute(style="transform: translateY(-135%);") What are topics in g0v Summit 2024?
-      .row.g-0.py-5.mb-5
+          img.mx-auto.me-md-0.mt-auto(src="../assets/img/zero-jump.svg", alt="", style="width: 10rem;")
+    #summit-topics.my-5.pb-5: .container.px-md-5
+      h0.twroadfont.text-brown.position-absolute(style="transform: translateY(-60%);") What are topics in g0v Summit 2024?
+      .row.gx-0.gy-5.py-5.mb-5
         .col-md-9.content.text-brown.twroadfont
           ol.mb-0
             li Nerd Politics v.s. Digital Governance
@@ -91,12 +92,12 @@ block body
             li Digital Infrastructure Based on Empathy, Inclusion and Diversity
             li Interaction Between Technology and Issues
         .col.d-flex
-          .ms-auto.mt-auto.pt-5: a.btn.btn-lg.btn-summit-green: h3.mb-0.fw-normal.p-1 Submit<i class="ms-2 bi bi-box-arrow-up-right"></i>
+          .mx-auto.me-md-0.mt-auto.pt-5: a.btn.btn-lg.btn-summit-green(href="//summit2024.g0v.tw/brd/2024/"): h3.mb-0.fw-normal.p-1 Submit<i class="ms-2 bi bi-box-arrow-up-right"></i>
       .row 
         .col-md-9
           p.text-brown eID / Personal Data Protection / AI Technology Regulation / Digital Platform Regulation / Digital Violence / Digital Sovereignty / Open Government / Big Data (Data Governance) / Mass Outsourcing / Map Data / Open Courses / Community Governance / Digital Toughness / Civic Advocacy / Digital Civil Defence / Open Spirit / Netiquette / CoC / Digital Polarisation / Digital DEI (Diversity and Inclusion) / Digital Literacy / SDG / Social Enterprise / Digital Transformation / Innovation / Education / Non-Profit Organisations ......
 
-    #footer.mt-5.pt-5
+    #footer
       .text-center.py-4 g0v summit 2024
 
 block script
