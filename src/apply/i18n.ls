@@ -7,7 +7,7 @@ i18n-res =
     ]
     title:
       year: "2024"
-      name: "g0v summit"
+      name: "g0v Summit"
       date: "Asia Taipei 2023/09/10 06:00 - 2023/12/10 23:59 (Taipei Time)"
     "zh": "Mandarin"
     "en": "English"
@@ -21,19 +21,19 @@ i18n-res =
     "我已明確知悉並會遵守在本表單中的任何欄位中不要使用任何縮網址": "I'm aware and will not using any shortened URLs in any field on this form"
     "本區段會包含投稿與講者資訊的相關問題": "
     　g0v Summit 2024 have five themes: \n
-    1. Nerd Politics v.s. Digital Governance-- eID / Personal Data Protection / AI Technology Regulation / Digital Platform Regulation / Digital Violence / Digital Sovereignty \n
-    2. Data, AI and Community Collaboration-- Open Government / Big Data (Data Governance) / Mass Outsourcing / Map Data / Open Courses \n
-    3. How Grassroots, Open, and Multi-Centred Civic Communities Respond to Political and Technological Totalitarianism-- Community Governance / Digital Toughness / Civic Advocacy / Digital Civil Defence / Open Spirit \n
-    4. Digital Infrastructure Based on Empathy, Inclusion and Diversity-- Netiquette / CoC / Digital Polarisation / Digital DEI (Diversity and Inclusion) / Digital Literacy \n
-    5. Interaction Between Technology and Issues-- SDG / Social Enterprise / Digital Transformation / Innovation / Education / Non-Profit Organisations"
+    1. “nerd politics” versus digital governance-- eID / Personal Data Protection / AI Technology Regulation / Digital Platform Regulation / Digital Violence / Digital Sovereignty \n
+    2. data, AI, and community collaboration-- Open Government / Big Data (Data Governance) / Mass Outsourcing / Map Data / Open Courses \n
+    3. grassroot, open, polycentric, and communal response to political and technological authoritarianism-- Community Governance / Digital Toughness / Civic Advocacy / Digital Civil Defence / Open Spirit \n
+    4. digital infrastructure grounded in empathy, inclusiveness, and plurality-- Netiquette / CoC / Digital Polarisation / Digital DEI (Diversity and Inclusion) / Digital Literacy \n
+    5. convergence of technology and social issues-- SDG / Social Enterprise / Digital Transformation / Innovation / Education / Non-Profit Organisations"
     "您的投稿標題": "Topic of your submission"
     "投稿的內容說明": "Description of the submission"
     "請選擇與你投稿內容相關連之 g0v Summit 2024 主軸": "Please select a theme related to your submission for g0v Summit 2024"
-    "Nerd Politics v.s. 數位治理": "Nerd Politics v.s. Digital Governance"
-    "資料、人工智慧與社群協作": "Data, AI and Community Collaboration"
-    "草根、開放、多中心的公民社群如何回應政治與科技的極權": "How Grassroots, Open, and Multi-Centred Civic Communities Respond to Political and Technological Totalitarianism"
-    "基於同理心、涵容、多元性的數位基礎建設": "Digital Infrastructure Based on Empathy, Inclusion and Diversity"
-    "技術與議題的交鋒": "Interaction Between Technology and Issues"
+    "Nerd Politics v.s. 數位治理": "“nerd politics” versus digital governance"
+    "資料、人工智慧與社群協作": "data, AI, and community collaboration"
+    "草根、開放、多中心的公民社群如何回應政治與科技的極權": "grassroot, open, polycentric, and communal response to political and technological authoritarianism"
+    "基於同理心、涵容、多元性的數位基礎建設": "digital infrastructure grounded in empathy, inclusiveness, and plurality"
+    "技術與議題的交鋒": "convergence of technology and social issues"
     "請選擇與你投稿內容相關連之 g0v Summit 2024 之關鍵字": "Please select keywords related to your submission for g0v Summit 2024"
     "可以參考本段落上方之說明": "You may refer to the above paragraph for guidance in selecting keywords relevant to your submission"
     "eID": "eID"
