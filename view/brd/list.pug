@@ -1,5 +1,5 @@
 //- view
-extends ../base.pug
+extends /base.pug
 block vars
   -
     var isViewer = (perms || []).filter(function(p) {
@@ -43,4 +43,4 @@ block body
       img.mr-1(src="/assets/img/c/logo/logo.png",style="height:1em")
       span POWER BY GRANTDASH
 block script
-  script(type="module"): include:lsc index.ls
+  script(type="module"): include:lsc /view/default/brd/index.ls
