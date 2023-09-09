@@ -1,5 +1,5 @@
 //- view
-extends /base.pug
+extends /view/default/base.pug
 block vars
   -
     var isViewer = (perms || []).filter(function(p) {return (p.config || {}).viewer}).length;
