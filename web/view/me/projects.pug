@@ -2,7 +2,7 @@
 extends /view/default/base.pug
 block vars
 block head
-  style(type="text/css"): include:stylus /view/default/me/projects.styl
+  style(type="text/css"): include:stylus /me/projects.styl
 block body
   include /modules/navtop.pug
   mixin badge(prj)
@@ -61,4 +61,4 @@ block script
   +script([
     {name: "dayjs", path: "dayjs.min.js"}
   ])
-  script(type="module"): include:lsc /view/default/me/projects.ls
+  script(type="module"): include:lsc /me/projects.ls
