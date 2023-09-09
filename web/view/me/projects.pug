@@ -1,0 +1,64 @@
+//- view
+extends /view/default/base.pug
+block vars
+block head
+  style(type="text/css"): include:stylus /view/default/me/projects.styl
+block body
+  include /modules/navtop.pug
+  mixin badge(prj)
+    .btn.btn-sm.prj-badge(ld="badge")&attributes(attributes) #[span(ld="text")] #[+i(ld="icon")]
+
+  +scope("projects").w-1024.rwd.mx-auto
+    .flex-grow-1.prjs
+      .my-5
+        h1(pd="t") info.title
+        p(pd="t") info.desc
+
+      .w-100.vertical-center(ld="no-prj"): .w-100.text-center.text-muted
+        .text-lg.mb-4(pd="t") noprj.title
+        div(pd="t") noprj.desc
+        +nbr(2)
+      div
+        div(ld-each="prj")
+          .prj.align-items-stretch.mx-2.mb-4
+            .mr-5.d-none.d-md-block(style="flex:0 0 auto;width:12em")
+              .d-flex.align-items-center.w-100: .w-100
+                .my-1
+                //.aspect-ratio.ratio-16by9.bg-light.border.rounded.mb-2(ld="thumb", style=`background:center center;background-size:cover`)
+                .w-100(style="flex:0 0 auto")
+                  .mb-2(style="text-align:right"): +badge(prj).d-none.d-md-block
+                  .action.w-100: .btn-group.d-flex.w-100
+                    a.btn.btn-sm.text-nowrap.btn-outline-primary(ld="view",href="#") #[span(pd="t") view] #[+i.i-eye]
+                    a.btn.btn-sm.btn-outline-primary.text-nowrap(ld="edit",href="#") #[span(pd="t") edit] #[+i.i-pen]
+            .flex-grow-1.text.d-flex.align-items-center: .w-100
+              .text-truncate.px-0.font-weight-bold(style="cursor:default")
+                a.text-dark.text-truncate.font-weight-bold.text-capitalize(
+                ld="title",href="#",style="max-width:450px;font-size:1.2em")
+              .d-none.d-md-block: hr.my-3
+              .d-block.d-md-none: .my-3
+              div
+                .row
+                  .col-sm-7.mb-2: ul.pl-0: li
+                    .text-muted #[span(pd="t") brd]
+                    div(ld="brd",href="#") #[span(ld="brd-text")]
+                    //- use this link format for brd when we are ready
+                    //-a(ld="brd",href="#") #[span(ld="brd-text")]#[+i.i-link.ml-2]
+                  .col-sm-1
+                  .col-sm-4.mb-2: ul.pl-0: li #[.text-muted #[span(pd="t") date]] #[div(ld="prettydate")]
+                .row
+                  .col-sm.mb-2: ul.pl-0: li #[.text-muted #[span(pd="t") desc]] #[div(ld="desc")]
+              .w-100.d-block.d-md-none: .action.w-100
+                +badge(prj)
+                .flex-grow-1
+                .btn-group.d-flex
+                  a.btn.btn-sm.text-nowrap.btn-outline-primary(ld="view",href="#") #[span(pd="t") view] #[+i.i-eye]
+                  a.btn.btn-sm.btn-outline-primary.text-nowrap(ld="edit",href="#") #[span(pd="t") edit] #[+i.i-pen]
+            .d-block.d-md-none.mt-5: hr
+
+  .py-5
+block script
+  +register-locals
+  +script([
+    {name: "dayjs", path: "dayjs.min.js"}
+  ])
+  script(type="module"): include:lsc /view/default/me/projects.ls
