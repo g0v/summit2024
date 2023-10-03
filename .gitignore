@@ -5,3 +5,5 @@ secret.*
 .DS_Store
 _public/
 _main/
+web/static/assets/css
+web/static/assets/img

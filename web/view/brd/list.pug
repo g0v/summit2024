@@ -6,41 +6,58 @@ block vars
       var cfg = p.config || {};
       return cfg.viewer || cfg["viewer.prj"];
     }).length;
+    var root = "/template/2024";
+block head
+  +css([
+    {url: `${root}/assets/css/base.css`},
+    {url: "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"}
+  ])
+  style(type="text/css"): include:stylus index.styl
+  +script([
+    {url: "https://s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-64923.js"}
+  ])
 block body
-  .container-sm.py-5
-    a.text-muted.text-nodeco(href=`/org/${org.slug}`) #{org.name} #[span(pd="t") 徵件平台]
-    h2.mb-4= brd.name
-    .textmuted.mt-2.mb-4= ldui.ellipsis(brd.description, 200)
+  .hero.pb-5
+    .container-sm.py-5.text-brown
+      .p-4.bg-white.rounded-lg.shadow-lg
+        .d-flex.g-4
+          .text-right
+            img.mb-1(src=`${root}/assets/img/pgln_g0v_summit.png`,width="192")
+            h1.twroadfont 線上投稿頁面
+          div
+            div= brd.description
+            hr
+            .d-flex.g-2
+              if stage.config["prj-new"]
+                a.btn.btn-success.d-flex.align-items-center.g-2(pd="auth-required", href=`/brd/${brd.slug}/apply`)
+                  span(pd="t") 建立提案
+                  i.bi.bi-box-arrow-up-right
+              else
+                .btn.btn-outline-secondary.disabled(pd="t") 非開放提案期間
+              a.btn.btn-outline-dark(pd="t auth-required", href=`/me/projects`) 我的提案
+              if perms.judge
+                a.btn.btn-outline-dark(pd="t auth-required", href=`/judge/`) 評審頁面
+              .flex-grow-1
+              if perms.admin || perms.owner
+                a.btn.btn-outline-dark.d-none(pd="t authed-only", href=`/brd/${brd.slug}/admin`) 主控台
 
-    .d-flex.g-2
-      if stage.config["prj-new"]
-        a.btn.btn-success(pd="t",href=`/brd/${brd.slug}/apply`) 建立提案
-      else
-        .btn.btn-outline-secondary.disabled(pd="t") 非開放提案期間
-      a.btn.btn-outline-dark(pd="t",href=`/me/projects`) 我的提案
-      if (perms || []).judge
-        a.btn.btn-outline-dark(pd="t",href=`/judge`) 評審頁面
-      .flex-grow-1
-      if (perms || []).admin || (perms || []).owner
-        a.btn.btn-outline-dark(pd="t",href=`/brd/${brd.slug}/admin`) 主控台
-    hr
-    .text-underline.pb-4(pd="t") 提案清單
+  .container-sm.pb-5.text-brown
+    h0.pb-4.twroadfont.d-block(style="margin-top:-.5em",pd="t") 提案清單
     if !(prjs && prjs.length)
-      .mb-4.text-muted(pd="t") 目前沒有可供瀏覽的提案
+      .mb-4(pd="t") 目前沒有可供瀏覽的提案
     each prj in prjs
       .mb-5.ml-0
-        +i.i-caret-right.position-absolute(style="font-size:.75em;margin-left:-1.25em;margin-top:.5em")
         if stage.config["prj-view"] || isViewer
           a(href=`/prj/${prj.slug}`,style="font-size:1.25em")= prj.name
         else
-          div(style="font-size:1.25em")= prj.name
-        p.text-muted.text-sm= (prj.description || '').substring(0,50) + ((prj.description || '').length > 50 ? '...' : '')
+          .text-brown(style="font-size:1.25em")= prj.name
+        p.text-sm= (prj.description || '').substring(0,50) + ((prj.description || '').length > 50 ? '...' : '')
   .container-sm.py-4.mt-4.border-top.d-flex.justify-content-between
     div
       a.mr-3(pd="t",href="/privacy/") 隱私權政策
       a(pd="t",href="/tos/") 使用者條款
     .text-sm.text-muted.d-flex.align-items-center
-      img.mr-1(src="/assets/img/c/logo/logo.png",style="height:1em")
+      img.mr-1(src="/assets/img/c/logo/logo.png",style="height:1em;margin-top:2px")
       span POWER BY GRANTDASH
 block script
   script(type="module"): include:lsc /view/default/brd/index.ls
