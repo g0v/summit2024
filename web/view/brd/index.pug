@@ -22,7 +22,7 @@ block body
             img.mb-1(src=`${root}/assets/img/pgln_g0v_summit.png`,width="192")
             h1.twroadfont 線上投稿頁面
           div
-            div(t="desc")
+            div= brd.description
             hr
             .d-flex.g-2
               if stage.config["prj-new"]
