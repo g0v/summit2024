@@ -68,7 +68,7 @@ i18n-res =
     "電子郵件將作為聯繫投稿者的唯一方式": "Email will serve as the only way conacting contributors"
     "您的服務單位與職稱": "Your affiliation and role"
     "將作為我們講者介紹的資訊": "Your responses will be used as information for introducing our speakers."
-    "我們應該如何稱呼您": "How should we address you on our website"
+    "我們應該如何稱呼您": "How should we address you on our website?"
     "我們將以此回覆作為講者資訊的內容，若習慣以本名稱呼則填入本名即可": "We will use this response for speaker information. If you prefer to be addressed by your full name, please provide it"
     "是否有服務單位 / 組織 / 社群的相關連結或社群帳號希望提供": "Any links of your affiliation/organization/community/social media you would like to attach"
     "本題回覆內容會放在講者資訊中": "The response will be placed in the speaker information"
@@ -80,7 +80,7 @@ i18n-res =
     "議程使用語言": "Language of the session"
     "華語": "Mandarin (Taiwan)"
     "英語": "English"
-    "是否需要協助簽證": "Do you need assistance with your visa"
+    "是否需要協助簽證": "Do you need assistance with your visa?"
     "請簡述您所具有之多元特質": "Please briefly describe the diversity of your traits"
     "包括但不限於性別、年齡、種族、職業、居住區域，足以讓 g0v Summit 呈現更多元的觀點，促進平等與共融。若無則填寫無即可": "Including but not limited to gender, age, race, occupation, and geographic location, which can contribute to showcasing a more diverse range of perspectives at the g0v Summit, in order to fostering equality and inclusion. If none, please indicate \"none\""
     "活動形式": "Format of the session"
@@ -109,7 +109,7 @@ i18n-res =
     "請告知工作坊的適合人數區間": "Please indicate the suitable number of participants of the workshop"
     "請告知會需要主辦單位準備之器材": "Please inform the equipments and materials you need"
     "目前根據場地，我們會為每個工作坊的議程準備投影機、螢幕、麥克風，其餘器材不保證能夠提供，建議自備": "The venue will provide at least a projector, a screen, and microphones for every workshop. Other equipments are not guaranteed."
-    "您是從哪裡得到 g0v Summit 2024 相關資訊的": "Where did you learn about g0v Summit 2024"
+    "您是從哪裡得到 g0v Summit 2024 相關資訊的": "Where did you learn about g0v Summit 2024?"
     "Facebook": "Facebook"
     "X (Twitter)": "X (formerly Twitter)"
     "Instagram": "Instagram"
@@ -120,6 +120,9 @@ i18n-res =
     "親友告知": "Family and friends"
     "其他網路資源": "Other online sources"
     "其他想對 g0v Summit 2024 說的話": "Any other words to g0v Summit 2024"
+    "投稿內容與投影片是否以創用授權 CC BY 釋出": "If there is a live broadcast this time, do you agree to air it?"
+    "如果本次有錄音、錄影是否允許": "If there is audio or video recording this time, are you allowed?"
+    "如果本次有直播是否同意播出": "Is the submitted content and presentation slides released under a Creative Commons license CC BY?"
 
   "zh-TW":
     "after-publish": "送件後案件將公開展示。機敏欄位則保持隱藏。"
@@ -242,5 +245,8 @@ i18n-res =
     "親友告知": "親友告知"
     "其他網路資源": "其他網路資源"
     "其他想對 g0v Summit 2024 說的話": "其他想對 g0v Summit 2024 說的話"
+    "投稿內容與投影片是否以創用授權 CC BY 釋出": "投稿內容與投影片是否以創用授權 CC BY 釋出"
+    "如果本次有錄音、錄影是否允許": "如果本次有錄音、錄影是否允許"
+    "如果本次有直播是否同意播出": "如果本次有直播是否同意播出"
 
 

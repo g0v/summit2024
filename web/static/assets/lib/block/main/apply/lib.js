@@ -613,6 +613,36 @@ fields = {
     meta: {
       title: "其他想對 g0v Summit 2024 說的話"
     }
+  },
+  "allow_cc_by": {
+    type: '@makeform/radio',
+    meta: {
+      title: "投稿內容與投影片是否以創用授權 CC BY 釋出",
+      isRequired: true,
+      config: {
+        values: ["是", "否"]
+      }
+    }
+  },
+  "allow_recording": {
+    type: '@makeform/radio',
+    meta: {
+      title: "如果本次有錄音、錄影是否允許",
+      isRequired: true,
+      config: {
+        values: ["是", "否"]
+      }
+    }
+  },
+  "allow_streaming": {
+    type: '@makeform/radio',
+    meta: {
+      title: "如果本次有直播是否同意播出",
+      isRequired: true,
+      config: {
+        values: ["是", "否"]
+      }
+    }
   }
 };
 window.lib = function(arg$){
