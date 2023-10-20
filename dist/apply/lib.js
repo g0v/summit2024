@@ -368,7 +368,7 @@ fields = {
             values: ['主題論壇'],
             isRequired: true,
             visible: true,
-            targets: ['sect-panel', 'panel_speaker_1', 'panel_speaker_1_affilation', 'panel_speaker_2', 'panel_speaker_2_affilation']
+            targets: ['sect-panel', 'panel_speaker_1', 'panel_speaker_1_affilation', 'panel_speaker_2', 'panel_speaker_2_affilation', 'panel_speaker_3', 'panel_speaker_3_affilation']
           }
         }, {
           type: 'dependency',
