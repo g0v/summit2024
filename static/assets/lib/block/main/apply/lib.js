@@ -266,13 +266,11 @@ fields = {
       title: "是否有服務單位 / 組織 / 社群的相關連結或社群帳號希望提供",
       isRequired: true,
       term: [{
-        opset: 'length',
+        opset: 'string',
         enabled: true,
-        op: 'lte',
-        msg: '太長了',
-        config: {
-          val: 500
-        }
+        op: 'url',
+        msg: "必須是連結",
+        config: {}
       }],
       config: {
         note: ["本題回覆內容會放在講者資訊中"],
@@ -370,7 +368,7 @@ fields = {
             values: ['主題論壇'],
             isRequired: true,
             visible: true,
-            targets: ['sect-panel', 'panel_speaker_1', 'panel_speaker_1_affilation', 'panel_speaker_2', 'panel_speaker_2_affilation', 'panel_speaker_3', 'panel_speaker_3_affilation']
+            targets: ['sect-panel', 'panel_speaker_1', 'panel_speaker_1_affilation', 'panel_speaker_2', 'panel_speaker_2_affilation']
           }
         }, {
           type: 'dependency',
@@ -600,7 +598,7 @@ fields = {
       title: "您是從哪裡得到 g0v Summit 2024 相關資訊的",
       isRequired: true,
       config: {
-        values: ["Facebook", "X (twitter)", "Instagram", "g0v.social", "其他社群夥伴或專案", "g0v slack", "g0v 官網", "親友告知", "其他網路資源"],
+        values: ["Facebook", "X (Twitter)", "Instagram", "g0v.social", "其他社群夥伴或專案", "g0v slack", "g0v 官網", "親友告知", "其他網路資源"],
         other: {
           enabled: true
         }
