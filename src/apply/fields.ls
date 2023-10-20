@@ -201,7 +201,7 @@ fields = {} <<<
     meta:
       title: "是否有服務單位 / 組織 / 社群的相關連結或社群帳號希望提供"
       is-required: true
-      term: [{opset: \length, enabled: true, op: \lte, msg: '太長了', config: val: 500}]
+      term: [ {opset: \string, enabled: true, op: \url, msg: "必須是連結", config: {}} ]
       config:
         note: ["本題回覆內容會放在講者資訊中"]
         as-link: true
@@ -292,7 +292,6 @@ fields = {} <<<
               sect-panel
               panel_speaker_1 panel_speaker_1_affilation
               panel_speaker_2 panel_speaker_2_affilation
-              panel_speaker_3 panel_speaker_3_affilation
             ]>
         * type: \dependency
           config:
@@ -432,7 +431,7 @@ fields = {} <<<
       config:
         values: [
           "Facebook"
-          "X (twitter)"
+          "X (Twitter)"
           "Instagram"
           "g0v.social"
           "其他社群夥伴或專案"

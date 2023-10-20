@@ -16,7 +16,7 @@ div
         img.mb-4(path,path-src="img/g0v-logo.svg",width="128",height="1288",style="height:auto",alt="g0v logo")
         .pb-4
       .border-top.border-bottom.py-4.my-4
-        h1 #[span(t="title.year")] #[span(t="title.name")]
+        h1 #[span(t="title.name")]
         .text-muted(t="title.date")
       div
         span(t="必填項目提示.0")
@@ -32,12 +32,20 @@ div
       .d-none(ld="for-lng", data-lng="en"): include ./doc/info.en.pug
       .d-none(ld="for-lng", data-lng="zh"): include ./doc/info.zh.pug
     .sect
-      //-.p-4.mb-5.border(style="white-space: pre-line;", t="本區段會包含投稿與講者資訊的相關問題")
+      h4 講者資訊
+      +widget("email")
+      +widget("affiliation")
+      +widget("name")
+      +widget("social_link")
+      +widget("diverse_traits")
+    .sect
+      h4 投稿議程（公開提案）
       .row
         .col-md: +widget("title_zh")
         .col-md: +widget("title_en")
       +widget("description_zh")
       +widget("description_en")
+
     .sect
       +widget("theme")
       .indent
@@ -48,15 +56,7 @@ div
         div(ld="visibility",data-name="keywords_4"): +widget("keywords_4")
         div(ld="visibility",data-name="keywords_5"): +widget("keywords_5")
     .sect
-      +widget("email")
-      +widget("affiliation")
-      +widget("name")
-      +widget("social_link")
-      +widget("time_attend")
       +widget("language")
-      +widget("visa_assistance")
-      +widget("diverse_traits")
-    .sect
       +widget("event_format")
       .sect-speech.indent.mb-4
         div(ld="visibility",data-name="participate_format"): +widget("participate_format")
@@ -77,6 +77,8 @@ div
         +widget("workshop_equipment")
 
     .sect.view-hide
+      +widget("time_attend")
+      +widget("visa_assistance")
       +widget("where_get")
       +widget("something_to_say")
 
