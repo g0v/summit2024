@@ -11,7 +11,7 @@ block body
     .modal-dialog.modal-dialog-scrollable.modal-xl
       .modal-content
         .modal-header
-          h2.modal-title About Call For Paper
+          h2.modal-title About Call For Proposal
           button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
         .modal-body.p-4
           include ../component/instructions.en.pug
@@ -39,8 +39,8 @@ block body
         #topbar.rounded-2.bg-white.p-3.w-100.row.align-items-center.gx-0
           .col-md-auto: img.ms-2(src="../assets/img/pgln_g0v_summit.png", alt="", style="height: 3rem; width: auto;")
           .ms-auto.col-md-auto.d-flex.align-items-center
-            a.link.ms-auto(href="#", data-bs-toggle="modal", data-bs-target="#instructions") About Call For Paper
-            a.link.ms-4(href="#", data-bs-toggle="modal", data-bs-target="#claiming") About Personal Data Collection
+            a.link.ms-auto(href="#", data-bs-toggle="modal", data-bs-target="#instructions") About Call For Proposal
+            //a.link.ms-4(href="#", data-bs-toggle="modal", data-bs-target="#claiming") About Personal Data Collection
             a.btn.btn-lg.btn-summit-green.ms-4.me-auto(href="//summit2024.g0v.tw/brd/2024/") Submit<i class="ms-2 bi bi-box-arrow-up-right"></i>
 
         #main-text.text-end.text-light.mt-5.me-3
@@ -59,9 +59,8 @@ block body
       .row.gx-0.gy-5.py-5.mb-5
         .col-md-7.d-flex.flex-column
           .content
-            p g0v Summit is a biennial conference held once in two years in Taiwan.
-            p Due to the covic-19's impact, Summit 2022 was canceled.
-            p Next year, Summit 2024 will awaken the passionate civic spirit within you.
+            p g0v Summit is a biennial gathering in Taiwan that focuses on civic hacking, open government, open-source collaboration, and citizen participation. It is a major international event in the open government community and attracted speakers from up to 33 countries in the last four editions, with nearly a thousand of attendees each time.
+            p In 2022, the g0v Summit was cancelled due to the pandemic. However, the wait is over. In the coming year, g0v Summit 2024 will rekindle your passion for civic activism!
           .mt-auto.pt-5: a.text-brown(href="//g0v.hackmd.io/@summit2024/book/", target="_blank") More →
 
         .col.ms-auto.d-flex.flex-column
@@ -75,22 +74,21 @@ block body
       h0.twroadfont.text-brown.position-absolute(style="transform: translateY(-60%);") What is g0v?
       .row.gx-0.gy-5.py-5.mb-5
         .col-md-9.content.text-brown
-          p Since 2012, the civic hacking movement has been sweeping across the globe. g0v, a community that advocates open source, information transparenc, and civic participation, launched its first event “hackath0n” at the end of 2012 with the slogan “Code to refactor society.” The movement of civic hacking has continued ever since.
-          p Over the past 8 years, thousands of participants have joined g0v hackathons and created tools and platforms that promote open data and open government. Many g0vers have created these tools to reduce the digital divide and facilitate access to public information for everyone, so that awareness of public affairs can be raised, and that deliberation and decision-making can be fact-bassed.
-          p In this global movement of open data and open government, g0v community has created a new model for the citizens and government officials to interact, communicate, and collaborate together.
+          p g0v is a grassroots social movement community dedicated to deepening the civic engagements and connections between the social arena and citizens. You can find like-minded partners in the g0v community, put your ideas into practice in a grassroots manner, and then release the results under an open-source license, letting people stand on your shoulders.
+          p g0v replaces the “o” in gov with “0”, thereby reimagining the role of government from scratch, and represents the vision from 0 to 1 of the generation of digital natives.
           .mt-5: a.text-brown(href="//g0v.tw", target="_blank") More →
         .col.d-flex
           img.mx-auto.me-md-0.mt-auto(src="../assets/img/zero-jump.svg", alt="", style="width: 10rem;")
     #summit-topics.my-5.pb-5: .container.px-md-5
-      h0.twroadfont.text-brown.position-absolute(style="transform: translateY(-60%);") What are topics in g0v Summit 2024?
+      h0.twroadfont.text-brown.position-absolute(style="transform: translateY(-60%);") What are the themes of g0v Summit 2024?
       .row.gx-0.gy-5.py-5.mb-5
         .col-md-9.content.text-brown.twroadfont
           ol.mb-0
-            li “nerd politics” versus digital governance
-            li data, AI, and community collaboration
-            li grassroot, open, polycentric, and communal response to political and technological authoritarianism
-            li digital infrastructure grounded in empathy, inclusiveness, and plurality
-            li convergence of technology and social issues
+            li “Nerd politics” v.s. digital governance
+            li Data, AI, and community collaboration
+            li Grassroots, open, polycentric, and communal responses to political and technological authoritarianism
+            li Digital infrastructure grounded in empathy, inclusiveness, and plurality
+            li Convergence of technology and social issues
         .col.d-flex
           .mx-auto.me-md-0.mt-auto.pt-5: a.btn.btn-lg.btn-summit-green(href="//summit2024.g0v.tw/brd/2024/"): h3.mb-0.fw-normal.p-1 Submit<i class="ms-2 bi bi-box-arrow-up-right"></i>
       .row 
