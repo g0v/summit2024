@@ -15,7 +15,9 @@ mod = ({root, ctx, t, pubsub, manager, bi, i18n}) ->
     block.i18n.add-resource-bundle \en, "", i18n-res.en, true, true
     block.i18n.add-resource-bundle \zh-TW, "", i18n-res["zh-TW"], true, true
     bi.transform \i18n
-    block.i18n.module.on \languageChanged, ~> @_ldview.render!
+    block.i18n.module.on \languageChanged, ~>
+      @optin!
+      @_ldview.render!
     @_ldview = view = new ldview do
       init-render: false
       root: root
@@ -56,6 +58,16 @@ mod = ({root, ctx, t, pubsub, manager, bi, i18n}) ->
     # NOTE this won't trigger plugins in cops and cofs
     for k,v of fields =>
       ((v.meta or {}).plugin or []).map -> plugin-run(k, v, it)
+
+    # tweak required status of fields containing variant based on lng
+    lng = block.i18n.language
+    for k,v of fields =>
+      if !(val = ((v.meta or {}).config or {}).variant) => continue
+      o = v.itf
+      m = lng.startsWith(val) or val.startsWith(lng)
+      c = o.serialize!
+      c.is-required = m
+      o.deserialize c
 
     @_ldview.render \visibility
 
