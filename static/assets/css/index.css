@@ -35,6 +35,10 @@
   text-decoration: none;
   color: var(--pgln-brown);
 }
+#topbar #timer-cfp span {
+  font-weight: bold;
+  color: var(--pgln-brown);
+}
 
 #write-something h0 {
   pointer-events: none;
