@@ -292,6 +292,7 @@ fields = {} <<<
               sect-panel
               panel_speaker_1 panel_speaker_1_affilation
               panel_speaker_2 panel_speaker_2_affilation
+              panel_speaker_3 panel_speaker_3_affilation
             ]>
         * type: \dependency
           config:
@@ -327,7 +328,6 @@ fields = {} <<<
       config:
         values: [
           "現場參與"
-          "線上參與"
         ]
 
   "speach_speaker":
