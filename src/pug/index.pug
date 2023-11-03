@@ -100,8 +100,23 @@ block body
     #footer
       .text-center.py-4 g0v Summit 2024
 
+    .modal.fade#cookie-policy(tabindex='-1')
+      .modal-dialog.modal-dialog-scrollable.modal-xl
+        .modal-content
+          .modal-header
+            h2.modal-title cookie 聲明
+            button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+          .modal-body.p-4
+            include ./component/cookie.zh.pug 
+    #cookie-agree.p-2.d-none
+      | 本網站使用 cookies 於廣告、社群與分析等用途，藉以增進您的使用體驗，繼續使用本網站即代表您同意使用 cookies，請參閱我們的 
+      a(href="#", data-bs-toggle="modal", data-bs-target="#cookie-policy") cookie 聲明
+      |  以獲得更多資訊。
+      a.btn.btn-summit-green.btn-sm(href="#") 同意
+
 block script
   script.
+    const storage = window.localStorage;
     let vw = $(window).width();
     let vh = $(window).height();
     const speed = 3;
@@ -113,7 +128,7 @@ block script
       bounce = $(el).data('bounce');
       let nextX = bounce.x + bounce.dx*speed;
       let nextY = bounce.y + bounce.dy*speed;
-      
+
       bounce.x = nextX;
       bounce.y = nextY;
       if (nextX < 0 || nextX > vw) {
@@ -125,11 +140,17 @@ block script
 
       $(el).css({
         "left": `${nextX}px`,
-        "top": `${nextY}px`
+        "top": `${nextY}px`,
       }).data({bounce: bounce})
 
       setTimeout(() => bounceMoving(el), 20);
     }
+
+    $("#cookie-agree a.btn").on("click", function(e) {
+      e.preventDefault();
+      storage.setItem("agreeCookie", true);
+      $("#cookie-agree").addClass("d-none");
+    })
 
     $(function() {
       vw = $(window).width();
@@ -158,6 +179,10 @@ block script
         }});
         bounceMoving(el);
       });
+
+      if(!storage.getItem("agreeCookie")) {
+        $("#cookie-agree").removeClass("d-none");
+      }
 
       $(window).on("load", function(e) {
         $("body").css("overflow", "unset");
