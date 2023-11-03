@@ -95,6 +95,18 @@ a:link:not(.btn, .nav-link):hover, a:visited:not(.btn, .nav-link):hover {
   top: 1rem;
 }
 
+#cookie-agree {
+  font-size: 0.875rem;
+  background: var(--pgln-yellow);
+  display: block;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: max-content;
+  text-align: center;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
