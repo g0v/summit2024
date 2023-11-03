@@ -116,7 +116,19 @@ block body
 
 block script
   script.
-    const storage = window.localStorage;
+    const storage = window.sessionStorage;
+    if(!storage.getItem("userLang")) {
+      var userLanguage = navigator.languages ? navigator.languages[0] : navigator.language || navigator.userLanguage;
+      userLanguage = userLanguage.toLowerCase();
+      console.log(userLanguage);
+      storage.setItem("userLang", userLanguage);
+      if (userLanguage.includes('zh-hant') || userLanguage.includes('zh-tw') || userLanguage.includes('zh-hk') 
+      || userLanguage.includes('zh-hans') || userLanguage.includes('zh-cn') || userLanguage.includes('zh')) {
+      } else {
+          window.location.href="/en";
+      }
+    }
+
     let vw = $(window).width();
     let vh = $(window).height();
     const speed = 3;

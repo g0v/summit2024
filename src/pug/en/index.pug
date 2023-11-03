@@ -42,7 +42,7 @@ block body
           .col-md-auto.d-flex.align-items-center
             a.link.ms-auto(href="#", data-bs-toggle="modal", data-bs-target="#instructions") About Call For Proposal
             //a.link.ms-4(href="#", data-bs-toggle="modal", data-bs-target="#claiming") About Personal Data Collection
-            a.btn.btn-lg.btn-summit-green.ms-4.me-auto(href="//summit2024.g0v.tw/brd/2024/") Submit<i class="ms-2 bi bi-box-arrow-up-right"></i>
+            a.btn.btn-lg.btn-summit-green.ms-4.me-auto(href="//summit2024.g0v.tw/brd/2024/?lng=en") Submit<i class="ms-2 bi bi-box-arrow-up-right"></i>
 
         #main-text.text-end.text-light.mt-5.me-3
           h2.mb-1 summit 2024
@@ -91,7 +91,7 @@ block body
             li Digital infrastructure grounded in empathy, inclusiveness, and plurality
             li Convergence of technology and social issues
         .col.d-flex
-          .mx-auto.me-md-0.mt-auto.pt-5: a.btn.btn-lg.btn-summit-green(href="//summit2024.g0v.tw/brd/2024/"): h3.mb-0.fw-normal.p-1 Submit<i class="ms-2 bi bi-box-arrow-up-right"></i>
+          .mx-auto.me-md-0.mt-auto.pt-5: a.btn.btn-lg.btn-summit-green(href="//summit2024.g0v.tw/brd/2024/?lng=en"): h3.mb-0.fw-normal.p-1 Submit<i class="ms-2 bi bi-box-arrow-up-right"></i>
       .row 
         .col-md-9
           p.text-brown eID / Personal Data Protection / AI Technology Regulation / Digital Platform Regulation / Digital Violence / Digital Sovereignty / Open Government / Big Data (Data Governance) / Mass Outsourcing / Map Data / Open Courses / Community Governance / Digital Toughness / Civic Advocacy / Digital Civil Defence / Open Spirit / Netiquette / CoC / Digital Polarisation / Digital DEI (Diversity and Inclusion) / Digital Literacy / SDG / Social Enterprise / Digital Transformation / Innovation / Education / Non-Profit Organisations ......
@@ -125,7 +125,7 @@ block script
 
       $(el).css({
         "left": `${nextX}px`,
-        "top": `${nextY}px`
+        "top": `${nextY}px`,
       }).data({bounce: bounce})
 
       setTimeout(() => bounceMoving(el), 20);
