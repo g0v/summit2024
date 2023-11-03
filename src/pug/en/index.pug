@@ -99,8 +99,34 @@ block body
     #footer
       .text-center.py-4 g0v Summit 2024
 
+    .modal.fade#cookie-policy(tabindex='-1')
+      .modal-dialog.modal-dialog-scrollable.modal-xl
+        .modal-content
+          .modal-header
+            h2.modal-title cookie policy
+            button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+          .modal-body.p-4
+            include ../component/cookie.en.pug 
+    #cookie-agree.p-2.d-none
+      | This website uses cookies for purposes such as advertising, social media, and analytics to enhance your user experience. By continuing to use this website, you agree to the use of cookies. Please refer to our 
+      a(href="#", data-bs-toggle="modal", data-bs-target="#cookie-policy") cookie policy
+      |  for more information. 
+      a.btn.btn-summit-green.btn-sm(href="#") agree
 block script
   script.
+    const storage = window.sessionStorage;
+    if(!storage.getItem("userLang")) {
+      var userLanguage = navigator.languages ? navigator.languages[0] : navigator.language || navigator.userLanguage;
+      userLanguage = userLanguage.toLowerCase();
+      console.log(userLanguage);
+      storage.setItem("userLang", userLanguage);
+      if (userLanguage.includes('zh-hant') || userLanguage.includes('zh-tw') || userLanguage.includes('zh-hk') 
+      || userLanguage.includes('zh-hans') || userLanguage.includes('zh-cn') || userLanguage.includes('zh')) {
+      } else {
+          window.location.href="/en";
+      }
+    }
+
     let vw = $(window).width();
     let vh = $(window).height();
     const speed = 3;
@@ -131,6 +157,12 @@ block script
       setTimeout(() => bounceMoving(el), 20);
     }
 
+    $("#cookie-agree a.btn").on("click", function(e) {
+      e.preventDefault();
+      storage.setItem("agreeCookie", true);
+      $("#cookie-agree").addClass("d-none");
+    })
+
     $(function() {
       vw = $(window).width();
       vh = $(window).height();
@@ -158,6 +190,10 @@ block script
         }});
         bounceMoving(el);
       });
+
+      if(!storage.getItem("agreeCookie")) {
+        $("#cookie-agree").removeClass("d-none");
+      }
 
       $(window).on("load", function(e) {
         $("body").css("overflow", "unset");
