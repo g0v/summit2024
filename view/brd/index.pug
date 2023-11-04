@@ -5,6 +5,13 @@ block vars
     var isViewer = (perms || []).filter(function(p) {return (p.config || {}).viewer}).length;
     var root = "/template/2024";
 block head
+  script(async src='https://www.googletagmanager.com/gtag/js?id=G-3V52RYWJVJ')
+  script.
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3V52RYWJVJ');
+    
   +css([
     {url: `${root}/assets/css/base.css`},
     {url: "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"}
