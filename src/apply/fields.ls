@@ -392,7 +392,6 @@ fields = {} <<<
       is-required: false
       config:
         values: [
-          "30 分鐘"
           "60 分鐘"
           "90 分鐘"
         ]
