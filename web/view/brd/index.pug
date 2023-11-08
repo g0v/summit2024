@@ -2,10 +2,15 @@
 extends /view/default/base.pug
 block vars
   -
-    var isViewer = (perms || []).filter(function(p) {return (p.config || {}).viewer}).length;
+    var isViewer = (perms || []).filter(function(p) {
+      var cfg = p.config || {};
+      return cfg.viewer || cfg["viewer.prj"];
+    }).length;
     var root = "/template/2024";
+    var meta = {
+      title: "提案列表 | g0v Summit 2024"
+    };
 block head
-  title 提案列表 | g0v Summit 2024
   script(async src='https://www.googletagmanager.com/gtag/js?id=G-3V52RYWJVJ')
   script.
     window.dataLayer = window.dataLayer || [];
