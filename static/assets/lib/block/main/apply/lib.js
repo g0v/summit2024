@@ -528,7 +528,7 @@ fields = {
       title: "請告知工作坊的時長",
       isRequired: false,
       config: {
-        values: ["30 分鐘", "60 分鐘", "90 分鐘"]
+        values: ["60 分鐘", "90 分鐘"]
       }
     }
   },
