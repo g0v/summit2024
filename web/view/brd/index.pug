@@ -79,9 +79,17 @@ block script
     main_desc=
       en: 'g0v Summit is a biennial gathering in Taiwan that focuses on civic hacking, open government, open-source collaboration, and citizen participation. It is a major international event in the open government community and attracted speakers from up to 33 countries in the last four editions, with nearly a thousand of attendees each time. <br>In 2022, the g0v Summit was cancelled due to the pandemic. However, the wait is over. In the coming year, g0v Summit 2024 will rekindle your passion for civic activism!'
       zh: 'g0v Summit 是由 g0v 台灣零時政府社群主辦的大型國際會議，慣例為 2 年一次。<br>受到疫情影響，2022 年停辦。明年，Summit 2024 將喚醒你體內的熱血公民魂。'
-
-    ldc.register \pagecfg, <[]> -> locales: {en: {"台灣零時政府社群主辦的大型國際會議": main_desc.en}, "zh-TW": {"台灣零時政府社群主辦的大型國際會議": main_desc.zh}}
-    ldc.register \pagecfg, <[]> -> locales: {en: {"線上投稿頁面": "Submission"}, "zh-TW": {"線上投稿頁面": "線上投稿頁面"}}
-    ldc.register \pagecfg, <[]> -> locales: {en: {"我的提案": "My Proposals"}, "zh-TW": {"我的提案": "我的提案"}}
-    ldc.register \pagecfg, <[]> -> locales: {en: {"提案清單": "Proposal List"}, "zh-TW": {"提案清單": "提案清單"}}
-    ldc.register \pagecfg, <[]> -> locales: {en: {"更多提案": "More Proposals"}, "zh-TW": {"更多提案": "更多提案"}}
+    ldc.register \pagecfg, <[]> ->
+      locales:
+        en:
+          "台灣零時政府社群主辦的大型國際會議": main_desc.en
+          "線上投稿頁面": "Submission"
+          "我的提案": "My Proposals"
+          "提案清單": "Proposal List"
+          "更多提案": "More Proposals"
+        "zh-TW":
+          "台灣零時政府社群主辦的大型國際會議": main_desc.zh
+          "線上投稿頁面": "線上投稿頁面"
+          "我的提案": "我的提案"
+          "提案清單": "提案清單"
+          "更多提案": "更多提案"
