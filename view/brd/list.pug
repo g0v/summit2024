@@ -33,9 +33,9 @@ block body
         .d-flex.g-4
           .text-right
             img.mb-1(src=`${root}/assets/img/pgln_g0v_summit.png`,width="192")
-            h1.twroadfont 線上投稿頁面
+            h1.twroadfont(pd="t") 線上投稿頁面
           div
-            div= brd.description
+            div(pd="t") summit_2024_main_description
             hr
             .d-flex.g-2
               if stage.config["prj-new"]
@@ -52,7 +52,7 @@ block body
                 a.btn.btn-outline-dark.d-none(pd="t authed-only", href=`/brd/${brd.slug}/admin`) 主控台
 
   .container-sm.pb-5.text-brown
-    h0.pb-4.twroadfont.d-block(style="margin-top:-.5em",pd="t") 提案清單
+    h0.pb-4.twroadfont.d-block(style="margin-top:-.9em",pd="t") 提案清單
     if !(prjs && prjs.length)
       .mb-4(pd="t") 目前沒有可供瀏覽的提案
     each prj in prjs
@@ -71,3 +71,12 @@ block body
       span POWER BY GRANTDASH
 block script
   script(type="module"): include:lsc /view/default/brd/index.ls
+  script(type="module"): :lsc
+    main_desc=
+      en: 'g0v Summit is a biennial gathering in Taiwan that focuses on civic hacking, open government, open-source collaboration, and citizen participation. It is a major international event in the open government community and attracted speakers from up to 33 countries in the last four editions, with nearly a thousand of attendees each time. <br>In 2022, the g0v Summit was cancelled due to the pandemic. However, the wait is over. In the coming year, g0v Summit 2024 will rekindle your passion for civic activism!'
+      zh: 'g0v Summit 是由 g0v 台灣零時政府社群主辦的大型國際會議，慣例為 2 年一次。<br>受到疫情影響，2022 年停辦。明年，Summit 2024 將喚醒你體內的熱血公民魂。'
+
+    ldc.register \pagecfg, <[]> -> locales: {en: {"summit_2024_main_description": main_desc.en}, "zh-TW": {"summit_2024_main_description": main_desc.zh}}
+    ldc.register \pagecfg, <[]> -> locales: {en: {"線上投稿頁面": "Submission"}, "zh-TW": {"線上投稿頁面": "線上投稿頁面"}}
+    ldc.register \pagecfg, <[]> -> locales: {en: {"我的提案": "My Proposals"}, "zh-TW": {"我的提案": "我的提案"}}
+    ldc.register \pagecfg, <[]> -> locales: {en: {"提案清單": "Proposal List"}, "zh-TW": {"提案清單": "提案清單"}}
