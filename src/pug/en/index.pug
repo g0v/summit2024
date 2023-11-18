@@ -6,7 +6,7 @@ block head
   link(rel="stylesheet", href="../assets/css/index.css?version="+timestamp)
 block body
   #loading
-    img(src="../assets/img/pgln.svg", alt="")
+    img(src="/assets/img/pgln.svg", alt="")
   .modal.fade#instructions(tabindex='-1')
     .modal-dialog.modal-dialog-scrollable.modal-xl
       .modal-content
@@ -40,7 +40,7 @@ block body
           .col-md-auto: img.ms-2(src="../assets/img/pgln_g0v_summit.png", alt="", style="height: 3rem; width: auto;")
           #timer-cfp.mx-auto.w-max.ps-5 CFP ~ December 10th, 2023 UTC+8, <span>999</span> days left
           .col-md-auto.d-flex.align-items-center
-            a.link.ms-auto(href="#", data-bs-toggle="modal", data-bs-target="#instructions") About Call For Proposal
+            a.link.ms-auto(href="/about-cfp/en") About Call For Proposal
             //a.link.ms-4(href="#", data-bs-toggle="modal", data-bs-target="#claiming") About Personal Data Collection
             a.btn.btn-lg.btn-summit-green.ms-4.me-auto(href="//summit2024.g0v.tw/brd/2024/?lng=en") Submit<i class="ms-2 bi bi-box-arrow-up-right"></i>
 
