@@ -72,5 +72,10 @@ mod = ({root, ctx, t, pubsub, manager, bi, i18n}) ->
     @_ldview.render \visibility
 
   brief: ->
-    name: @formmgr.content("title_zh")
-    description: @formmgr.content("description_zh")
+    lng = i18n.getLanguage!
+    if /zh/.exec(lng) =>
+      name: @formmgr.content("title_zh")
+      description: @formmgr.content("description_zh")
+    else =>
+      name: @formmgr.content("title_en")
+      description: @formmgr.content("description_en")
