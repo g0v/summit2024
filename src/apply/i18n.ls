@@ -26,7 +26,7 @@ i18n-res =
     2. data, AI, and community collaboration-- Open Government / Big Data (Data Governance) / Mass Outsourcing / Map Data / Open Courses \n
     3. grassroot, open, polycentric, and communal response to political and technological authoritarianism-- Community Governance / Digital Toughness / Civic Advocacy / Digital Civil Defence / Open Spirit \n
     4. digital infrastructure grounded in empathy, inclusiveness, and plurality-- Netiquette / CoC / Digital Polarisation / Digital DEI (Diversity and Inclusion) / Digital Literacy \n
-    5. convergence of technology and social issues-- SDG / Social Enterprise / Digital Transformation / Innovation / Education / Non-Profit Organisations"
+    5. convergence of technology and social issues-- SDGs / Social Enterprise / Digital Transformation / Innovation / Education / Non-Profit Organisations"
     "講者資訊": "Speaker Information"
     "投稿議程（公開提案）": "Submission Agenda (Open Proposal)"
     "您的投稿標題": "Session title"
@@ -149,17 +149,17 @@ i18n-res =
     "我已明確知悉並會遵守在本表單中的任何欄位中不要使用任何縮網址": "我已明確知悉並會遵守在本表單中的任何欄位中不要使用任何縮網址"
     "本區段會包含投稿與講者資訊的相關問題": "
     　g0v Summit 2024 議程包含以下五大主軸： \n
-    1. Nerd Politics v.s. 數位治理：eID / 個人資料保護 / AI 科技規範 / 數位平台規管 / 數位性暴力 / 數位主權 \n
+    1. Nerd Politics vs. 數位治理：eID / 個人資料保護 / AI 科技規範 / 數位平台規管 / 數位性暴力 / 數位主權 \n
     2. 資料、人工智慧與社群協作：開放政府 / 大數據(資料治理) / 群眾外包 / 地圖資料 / 開放課程 \n
     3. 草根、開放、多中心的公民社群如何回應政治與科技的極權：社群治理 / 數位韌性 / 公民倡議 / 數位民防 / 開源精神 \n
     4. 基於同理心、涵容、多元性的數位基礎建設：網路禮儀Netiquette / CoC / 數位兩極化 / 數位DEI（多元共融）/ 數位素養 \n
-    5. 技術與議題的交鋒：SDG ／社會企業 / 數位轉型 / 創新創業 / 教育 / 非營利組織"
+    5. 技術與議題的交鋒：SDGs ／社會企業 / 數位轉型 / 創新創業 / 教育 / 非營利組織"
     "講者資訊": "講者資訊"
     "投稿議程（公開提案）": "投稿議程（公開提案）"
     "您的投稿標題": "您的投稿標題"
     "投稿的內容說明": "投稿的內容說明"
     "請選擇與你投稿內容相關連之 g0v Summit 2024 主軸": "請選擇與你投稿內容相關連之 g0v Summit 2024 主軸"
-    "Nerd Politics v.s. 數位治理": "Nerd Politics v.s. 數位治理"
+    "Nerd Politics v.s. 數位治理": "Nerd Politics vs. 數位治理"
     "資料、人工智慧與社群協作": "資料、人工智慧與社群協作"
     "草根、開放、多中心的公民社群如何回應政治與科技的極權": "草根、開放、多中心的公民社群如何回應政治與科技的極權"
     "基於同理心、涵容、多元性的數位基礎建設": "基於同理心、涵容、多元性的數位基礎建設"
