@@ -32,14 +32,14 @@ div
       .d-none(ld="for-lng", data-lng="en"): include ./doc/info.en.pug
       .d-none(ld="for-lng", data-lng="zh"): include ./doc/info.zh.pug
     .sect
-      h4 講者資訊
+      h4(t="講者資訊")
       +widget("email")
       +widget("affiliation")
       +widget("name")
       +widget("social_link")
       +widget("diverse_traits")
     .sect
-      h4 投稿議程（公開提案）
+      h4(t="投稿議程（公開提案）")
       .row
         .col-md: +widget("title_zh")
         .col-md: +widget("title_en")

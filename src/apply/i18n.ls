@@ -27,6 +27,8 @@ i18n-res =
     3. grassroot, open, polycentric, and communal response to political and technological authoritarianism-- Community Governance / Digital Toughness / Civic Advocacy / Digital Civil Defence / Open Spirit \n
     4. digital infrastructure grounded in empathy, inclusiveness, and plurality-- Netiquette / CoC / Digital Polarisation / Digital DEI (Diversity and Inclusion) / Digital Literacy \n
     5. convergence of technology and social issues-- SDG / Social Enterprise / Digital Transformation / Innovation / Education / Non-Profit Organisations"
+    "講者資訊": "Speaker Information"
+    "投稿議程（公開提案）": "Submission Agenda (Open Proposal)"
     "您的投稿標題": "Session title"
     "投稿的內容說明": "Session Description"
     "請選擇與你投稿內容相關連之 g0v Summit 2024 主軸": "Please select themes related to your proposal for g0v Summit 2024"
@@ -152,6 +154,8 @@ i18n-res =
     3. 草根、開放、多中心的公民社群如何回應政治與科技的極權：社群治理 / 數位韌性 / 公民倡議 / 數位民防 / 開源精神 \n
     4. 基於同理心、涵容、多元性的數位基礎建設：網路禮儀Netiquette / CoC / 數位兩極化 / 數位DEI（多元共融）/ 數位素養 \n
     5. 技術與議題的交鋒：SDG ／社會企業 / 數位轉型 / 創新創業 / 教育 / 非營利組織"
+    "講者資訊": "講者資訊"
+    "投稿議程（公開提案）": "投稿議程（公開提案）"
     "您的投稿標題": "您的投稿標題"
     "投稿的內容說明": "投稿的內容說明"
     "請選擇與你投稿內容相關連之 g0v Summit 2024 主軸": "請選擇與你投稿內容相關連之 g0v Summit 2024 主軸"
