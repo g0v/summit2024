@@ -68,7 +68,7 @@ block body
           #timer.mx-auto.me-md-0
             h5 Summit 2024<br>倒數
             span 999
-            h5.text-end 天
+            h5.text-end.pe-3 天
           .mx-auto.me-md-0.mt-auto.pt-5: a.btn.btn-lg.btn-summit-green(href="//g0v.hackmd.io/@summit2024/book/https%3A%2F%2Fg0v.hackmd.io%2FdttYgGq1SmqCCp4ZntffZw", target="_blank"): h3.mb-0.fw-normal.p-1 我想一起籌備 Summit
 
     #what-is-g0v.my-5.pb-5: .container.px-md-5
@@ -125,7 +125,7 @@ block script
       if (userLanguage.includes('zh-hant') || userLanguage.includes('zh-tw') || userLanguage.includes('zh-hk') 
       || userLanguage.includes('zh-hans') || userLanguage.includes('zh-cn') || userLanguage.includes('zh')) {
       } else {
-          window.location.href="/en";
+        window.location.href="/en";
       }
     }
 
@@ -196,11 +196,13 @@ block script
         $("#cookie-agree").removeClass("d-none");
       }
 
-      $(window).on("load", function(e) {
-        $("body").css("overflow", "unset");
-        $("#loading").fadeOut(500);
-      }).on("resize", function(e) {
+      $(window).on("resize", function(e) {
         vw = $(window).width();
         vh = $(window).height();
       })
+    })
+
+    $(window).on("load", function(e) {
+      $("body").css("overflow", "unset");
+      $("#loading").fadeOut(500);
     })

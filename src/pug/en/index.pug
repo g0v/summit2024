@@ -195,11 +195,13 @@ block script
         $("#cookie-agree").removeClass("d-none");
       }
 
-      $(window).on("load", function(e) {
-        $("body").css("overflow", "unset");
-        $("#loading").fadeOut(500);
-      }).on("resize", function(e) {
+      $(window).on("resize", function(e) {
         vw = $(window).width();
         vh = $(window).height();
       })
+    })
+
+    $(window).on("load", function(e) {
+      $("body").css("overflow", "unset");
+      $("#loading").fadeOut(500);
     })
