@@ -121,8 +121,10 @@ block script
       console.log(userLanguage);
       if (userLanguage.includes('zh-hant') || userLanguage.includes('zh-tw') || userLanguage.includes('zh-hk') 
       || userLanguage.includes('zh-hans') || userLanguage.includes('zh-cn') || userLanguage.includes('zh')) {
+        storage.setItem("userLang", "zh");
         window.location.href="/";
       } else {
+        storage.setItem("userLang", "en");
       }
     } else if(storage.getItem("userLang") === 'zh') {
       window.location.href="/";

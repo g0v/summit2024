@@ -123,7 +123,9 @@ block script
       console.log(userLanguage);
       if (userLanguage.includes('zh-hant') || userLanguage.includes('zh-tw') || userLanguage.includes('zh-hk') 
       || userLanguage.includes('zh-hans') || userLanguage.includes('zh-cn') || userLanguage.includes('zh')) {
+        storage.setItem("userLang", "zh");
       } else {
+        storage.setItem("userLang", "en");
         window.location.href="/en";
       }
     } else if(storage.getItem("userLang") === 'en') {
