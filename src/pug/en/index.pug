@@ -119,12 +119,13 @@ block script
       var userLanguage = navigator.languages ? navigator.languages[0] : navigator.language || navigator.userLanguage;
       userLanguage = userLanguage.toLowerCase();
       console.log(userLanguage);
-      storage.setItem("userLang", userLanguage);
       if (userLanguage.includes('zh-hant') || userLanguage.includes('zh-tw') || userLanguage.includes('zh-hk') 
       || userLanguage.includes('zh-hans') || userLanguage.includes('zh-cn') || userLanguage.includes('zh')) {
+        window.location.href="/";
       } else {
-          window.location.href="/en";
       }
+    } else if(storage.getItem("userLang") === 'zh') {
+      window.location.href="/";
     }
 
     let vw = $(window).width();
@@ -161,6 +162,12 @@ block script
       e.preventDefault();
       storage.setItem("agreeCookie", true);
       $("#cookie-agree").addClass("d-none");
+    })
+
+    $("#lan").on("click", function(e) {
+      e.preventDefault();
+      storage.setItem("userLang", "zh");
+      window.location.href="/";
     })
 
     $(function() {
