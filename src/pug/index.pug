@@ -38,11 +38,11 @@ block body
       .container.px-0.px-md-5.pt-md-4.position-relative
         #topbar.rounded-2.bg-white.p-3.w-100.row.align-items-center.gx-0
           .col-md-auto: img.ms-2(src="assets/img/pgln_g0v_summit.png", alt="", style="height: 3rem; width: auto;")
-          #timer-cfp.mx-auto.w-max.ps-5 提案截止 2023 年 12 月 10 日 尚餘 <span>999</span> 天
+          #timer-cfp.mx-auto.w-max.ps-md-5.my-2 提案截止 2023 年 12 月 10 日 尚餘 <span>999999</span> 秒
           .col-md-auto.d-flex.align-items-center
             a.link.ms-auto(href="/about-cfp") 投稿說明
-            //a.link.ms-4(href="#", data-bs-toggle="modal", data-bs-target="#claiming") 個資說明
-            a.btn.btn-lg.btn-summit-green.ms-4.me-auto(href="//summit2024.g0v.tw/brd/2024/") 我要投稿<i class="ms-2 bi bi-box-arrow-up-right"></i>
+            a.btn.btn-summit-green.ms-3(href="//summit2024.g0v.tw/brd/2024/") 我要投稿<i class="ms-2 bi bi-box-arrow-up-right"></i>
+            a.btn.btn-summit-yellow.ms-3.me-auto(href="http://eepurl.com/iDb61o", target="_blank") 訂閱電子報<i class="ms-2 bi bi-envelope"></i>
 
         #main-text.text-end.text-light.mt-5.me-3
           h2.mb-1 summit 2024
@@ -96,9 +96,6 @@ block body
       .row 
         .col-md-9
           p.text-brown eID / 個人資料保護 / AI 科技規範 / 數位平台規管 / 數位性暴力 / 數位主權 / 開放政府 / 大數據(資料治理) / 群眾外包 / 地圖資料 / 開放課程 / 社群治理 / 數位韌性 / 公民倡議 / 數位民防 / 開源精神 / 網路禮儀Netiquette / CoC / 數位兩極化 / 數位DEI（多元共融）/ 數位素養 / SDGs / 社會企業 / 數位轉型 / 創新創業 / 教育 / 非營利組織 ......
-
-    #footer
-      .text-center.py-4 g0v Summit 2024
 
     .modal.fade#cookie-policy(tabindex='-1')
       .modal-dialog.modal-dialog-scrollable.modal-xl
@@ -176,13 +173,19 @@ block script
     $(function() {
       vw = $(window).width();
       vh = $(window).height();
-      const a = new Date();
+      let a = new Date();
       const b = new Date(2024, 4, 4, 0, 0, 0, 0);
       const c = new Date(2023, 11, 10, 0, 0, 0, 0);
       const delta = Math.ceil((b-a)/(24*60*60*1000));
-      const delta_cfp = Math.ceil((c-a)/(24*60*60*1000));
       $("#timer span").text(delta);
-      $("#timer-cfp span").text(delta_cfp);
+
+      setInterval(function() {
+        a = new Date();
+        const delta_cfp = Math.ceil((c-a)/1000);
+        $("#timer-cfp span").text(delta_cfp);
+        //console.log(delta_cfp);
+      }, 500);
+
 
       $("#cloud .text-block").each(function (index, el) {
         let x = randomInt(vw);
