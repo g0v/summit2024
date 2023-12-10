@@ -12,6 +12,8 @@ ldc.register \pagecfg, <[]> ->
       "更多提案": "More Proposals"
       "隱私權政策": "Privacy Policy"
       "使用者條款": "Term of Use"
+      "untitled": "untitled"
+      "no description": "no description"
     "zh-TW":
       "台灣零時政府社群主辦的大型國際會議": main_desc.zh
       "線上投稿頁面": "線上投稿頁面"
@@ -21,6 +23,8 @@ ldc.register \pagecfg, <[]> ->
       "更多提案": "更多提案"
       "隱私權政策": "隱私權政策"
       "使用者條款": "使用者條款"
+      "untitled": "未命名"
+      "no description": "尚無描述"
 ldc.register <[pagelocals core]>, ({pagelocals, core}) ->
   <- core.init!then _
   lc = {lng: \zh}
@@ -33,11 +37,11 @@ ldc.register <[pagelocals core]>, ({pagelocals, core}) ->
         view:
           handler:
             name: ({node, ctx}) ->
-              node.innerText = ctx.name[lc.lng] or ctx.name.en or ctx.name.zh or ''
+              node.innerText = ctx.name[lc.lng] or ctx.name.en or ctx.name.zh or core.i18n.t('untitled')
               if pagelocals.viewer => node.setAttribute \href, "/prj/#{ctx.slug}"
               else node.removeAttribute \href
             desc: ({node, ctx}) ->
-              text = (ctx.desc[lc.lng] or ctx.desc.en or ctx.desc.zh or '')
+              text = (ctx.desc[lc.lng] or ctx.desc.en or ctx.desc.zh or core.i18n.t('no description'))
               text = if text.length > 80 => text.substring(0, 80) + '...' else text
               node.innerText = text
   setlng = (lng) ->

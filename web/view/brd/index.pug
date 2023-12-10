@@ -70,23 +70,7 @@ block body
       img.mr-1(src="/assets/img/c/logo/logo.png",style="height:1em;margin-top:2px")
       span POWER BY GRANTDASH
 block script
-  -
-    locals.prjs = locals.prjs.map(function(p) {
-      var form = (((p.detail || {}).custom || {}).open || {});
-      var name = {
-        zh: (form.title_zh || {}).v || '未命名',
-        en: (form.title_en || {}).v || 'untitled'
-      };
-      var desc = {
-        zh: (form.description_zh || {}).v || '無簡介',
-        en: (form.description_en || {}).v || 'no description'
-      };
-      return {name, desc, slug: p.slug};
-    });
-  script(type="module").
-    ldc.register("pagelocals", [], function() {
-      return !{JSON.stringify({prjs: locals.prjs, viewer: stage.config["prj-view"] || isViewer})};
-    });
+  include common-script.pug
   script(type="module"): include:lsc /view/default/brd/index.ls
   script(type="module"): include:lsc index.ls
   script: :lsc
