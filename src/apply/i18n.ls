@@ -8,7 +8,12 @@ i18n-res =
     title:
       year: "2024"
       name: "g0v Summit 2024"
-      date: "Asia Taipei 2023/09/10 06:00 - 2023/12/10 23:59 (Taipei Time)"
+      date: [
+        "Application Period: "
+        "2023/09/10 06:00 - "
+        "2023/12/10 23:59"
+        "2024/03/10 23:59 (Taipei Time)"
+      ]
     "desc": "g0v Summit is a biennial conference in Taiwan. It is a crucial event for the international open government community, focusing on issues such as open government, open-source collaboration, and civic engagement. Join us on May 4-5, 2024 in Taiwan!"
     "zh": "Mandarin"
     "en": "English"
@@ -135,7 +140,12 @@ i18n-res =
     title:
       year: "2024"
       name: "g0v Summit 2024 雙年會"
-      date: "報名期間：台灣時間 2023 年 9 月 10 日 06:00 至 12 月 10 日 23:59 止"
+      date: [
+        "報名期間："
+        "台灣時間 2023年9月10日 06:00 至 "
+        "12月10日 23:59"
+        "2024年3月10日 23:59 止"
+      ]
     "desc": "g0v Summit 是由 g0v 零時政府主辦的大型國際會議，慣例為 2 年一次。 受到疫情影響，2022 年停辦，明年，Summit 2024 將喚醒你體內的熱血公民魂。"
     "zh": "華文"
     "en": "英文"

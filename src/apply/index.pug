@@ -17,8 +17,14 @@ div
         img.mb-4(path,path-src="img/g0v-logo.svg",width="128",height="1288",style="height:auto",alt="g0v logo")
         .pb-4
       .border-top.border-bottom.py-4.my-4
-        h1 #[span(t="title.name")]
-        .text-muted(t="title.date")
+        h1.mb-4 #[span(t="title.name")]
+        .text-muted
+          .text-sm(t="title.date.0")
+          .ml-3.d-flex.g-2.align-items-end.font-weight-bold.justify-content-center
+            div(t="title.date.1")
+            div
+              .text-sm(t="title.date.2",style="opacity:0.5;text-decoration:line-through;font-weight:300")
+              .text-danger(t="title.date.3")
       div
         span(t="必填項目提示.0")
         span.mx-2 #[span.text-danger.font-weight-bold *]
