@@ -33,11 +33,11 @@ ldc.register <[pagelocals core]>, ({pagelocals, core}) ->
         view:
           handler:
             name: ({node, ctx}) ->
-              node.innerText = ctx.name[lc.lng]
+              node.innerText = ctx.name[lc.lng] or ctx.name.en or ctx.name.zh or ''
               if pagelocals.viewer => node.setAttribute \href, "/prj/#{ctx.slug}"
               else node.removeAttribute \href
             desc: ({node, ctx}) ->
-              text = (ctx.desc[lc.lng] or '')
+              text = (ctx.desc[lc.lng] or ctx.desc.en or ctx.desc.zh or '')
               text = if text.length > 80 => text.substring(0, 80) + '...' else text
               node.innerText = text
   setlng = (lng) ->

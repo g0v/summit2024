@@ -73,7 +73,6 @@ block script
   -
     locals.prjs = locals.prjs.map(function(p) {
       var form = (((p.detail || {}).custom || {}).open || {});
-      console.log(p.detail);
       var name = {
         zh: (form.title_zh || {}).v || '未命名',
         en: (form.title_en || {}).v || 'untitled'
