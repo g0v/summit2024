@@ -37,7 +37,12 @@ h6 {
   font-weight: bold;
 }
 
+red {
+  color: red;
+}
+
 a:link:not(.btn, .nav-link), a:visited:not(.btn, .nav-link) {
+  color: var(--pgln-brown);
   text-decoration: underline;
 }
 a:link:not(.btn, .nav-link):hover, a:visited:not(.btn, .nav-link):hover {
