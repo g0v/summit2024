@@ -68,6 +68,7 @@ block body
       img.mr-1(src="/assets/img/c/logo/logo.png",style="height:1em;margin-top:2px")
       span POWER BY GRANTDASH
 block script
+  include common-script.pug
   script(type="module"): include:lsc /view/default/brd/index.ls
   script(type="module"): include:lsc index.ls
   script: :lsc
