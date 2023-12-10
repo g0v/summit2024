@@ -1,0 +1,19 @@
+//- module
+-
+  locals.prjs = locals.prjs.map(function(p) {
+    var form = (((p.detail || {}).custom || {}).open || {});
+    var name = {
+      zh: (form.title_zh || {}).v || null,
+      en: (form.title_en || {}).v || null
+    };
+    var desc = {
+      zh: (form.description_zh || {}).v || null,
+      en: (form.description_en || {}).v || null
+    };
+    return {name, desc, slug: p.slug};
+  });
+script(type="module").
+  ldc.register("pagelocals", [], function() {
+    return !{JSON.stringify({prjs: locals.prjs, viewer: stage.config["prj-view"] || isViewer})};
+  });
+
