@@ -45,4 +45,3 @@ ldc.register <[pagelocals core]>, ({pagelocals, core}) ->
     view.render!
   setlng core.i18n.language
   core.i18n.on \languageChanged, (lng) -> setlng lng
-  _jf.flush!
