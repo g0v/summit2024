@@ -36,7 +36,7 @@ block body
             img.mb-1(src=`${root}/assets/img/pgln_g0v_summit.png`,width="192")
             h1.twroadfont(pd="t") 線上投稿頁面
           div
-            div(pd="t") 台灣零時政府社群主辦的大型國際會議
+            div(pd="t",style="white-space:pre-wrap") 台灣零時政府社群主辦的大型國際會議
             hr
             .d-flex.g-2
               if stage.config["prj-new"]
@@ -56,13 +56,10 @@ block body
     h0.pb-4.twroadfont.d-block(style="margin-top:-.9em",pd="t") 提案清單
     if !(prjs && prjs.length)
       .mb-4(pd="t") 目前沒有可供瀏覽的提案
-    each prj in prjs
-      .mb-5.ml-0
-        if stage.config["prj-view"] || isViewer
-          a(href=`/prj/${prj.slug}`,style="font-size:1.25em")= prj.name
-        else
-          .text-brown(style="font-size:1.25em")= prj.name
-        p.text-sm= (prj.description || '').substring(0,50) + ((prj.description || '').length > 50 ? '...' : '')
+    else
+      .mb-5.ml-0(ld-each="prj")
+        a(ld="name",style="font-size:1.25em")
+        p.text-sm(ld="desc")
   .container-sm.py-4.mt-4.border-top.d-flex.justify-content-between
     div
       a.mr-3(pd="t",href="/privacy/") 隱私權政策
@@ -72,30 +69,4 @@ block body
       span POWER BY GRANTDASH
 block script
   script(type="module"): include:lsc /view/default/brd/index.ls
-  script(type="module"): :lsc
-    main_desc=
-      en: 'g0v Summit is an international conference hosted by g0v once every two years. Due to the impact of the pandemic, it was suspended in 2022. Next year, the g0v Summit 2024 will encourage your passionate civic spirit.'
-      zh: 'g0v Summit 是由 g0v 台灣零時政府社群主辦的大型國際會議，慣例為 2 年一次。受到疫情影響，2022 年停辦。明年，Summit 2024 將喚醒你體內的熱血公民魂。'
-
-    ldc.register \pagecfg, <[]> ->
-      locales:
-        en:
-          "台灣零時政府社群主辦的大型國際會議": main_desc.en
-          "線上投稿頁面": "Submission"
-          "建立提案": "Create Submission"
-          "我的提案": "My Proposals"
-          "提案清單": "Proposal List"
-          "更多提案": "More Proposals"
-          "隱私權政策": "Privacy Policy"
-          "使用者條款": "Term of Use"
-        "zh-TW":
-          "台灣零時政府社群主辦的大型國際會議": main_desc.zh
-          "線上投稿頁面": "線上投稿頁面"
-          "建立提案": "建立提案"
-          "我的提案": "我的提案"
-          "提案清單": "提案清單"
-          "更多提案": "更多提案"
-          "隱私權政策": "隱私權政策"
-          "使用者條款": "使用者條款"
-  script.
-    _jf.flush();
+  script(type="module"): include:lsc index.ls
