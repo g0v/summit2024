@@ -1,0 +1,29 @@
+name: Deploy
+
+on:
+  push:
+    branches: release
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./static
+    - name: Trigger workflow in other repo
+      uses: actions/github-script@v6
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const result = await github.rest.actions.createWorkflowDispatch({
+            owner: 'g0v',
+            repo: 'summit.g0v.tw',
+            workflow_id: 'updateSubmodules.yml',
+            ref: 'gh-pages'
+          })
+          console.log(result)
