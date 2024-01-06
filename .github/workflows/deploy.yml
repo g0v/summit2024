@@ -18,7 +18,7 @@ jobs:
     - name: Trigger workflow in other repo
       uses: actions/github-script@v6
       with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+        github-token: ${{ secrets.GHA_WORKFLOW_TRIGGER }}
         script: |
           const result = await github.rest.actions.createWorkflowDispatch({
             owner: 'g0v',
