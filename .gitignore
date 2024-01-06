@@ -118,3 +118,4 @@ dist
 # deploy
 _public/
 _main/
+_grantdash/

@@ -6,7 +6,7 @@ const connect = require('gulp-connect');
 const sitemap = require('gulp-sitemap');
 const path = require('path')
 
-function buildSass(baseurl="/") {
+function buildSass(baseurl="/2024/") {
   let dest_path = '.' + path.join('/static/', baseurl, '/assets/css')
   gulp.src('src/sass/**/*.sass')
     .pipe(data((file) => {
@@ -21,7 +21,7 @@ function buildSass(baseurl="/") {
     .pipe(connect.reload());
 }
 
-function buildPug(baseurl="/") {
+function buildPug(baseurl="/2024/") {
   let build_time = new Date().getTime();
   let dest_path = '.' + path.join('/static/', baseurl)
   console.log(dest_path)

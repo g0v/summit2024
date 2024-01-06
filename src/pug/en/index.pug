@@ -2,11 +2,11 @@ extends ../_layout.pug
 block variables
   - title = "CFP"
 block head
-  link(rel="stylesheet", href="../assets/css/base.css?version="+timestamp)
-  link(rel="stylesheet", href="../assets/css/index.css?version="+timestamp)
+  link(rel="stylesheet", href="assets/css/base.css?version="+timestamp)
+  link(rel="stylesheet", href="assets/css/index.css?version="+timestamp)
 block body
   #loading
-    img(src="/assets/img/pgln.svg", alt="")
+    img(src="assets/img/pgln.svg", alt="")
   .modal.fade#instructions(tabindex='-1')
     .modal-dialog.modal-dialog-scrollable.modal-xl
       .modal-content
@@ -24,7 +24,7 @@ block body
         .modal-body.p-4
           include ../component/claiming.en.pug
   main
-    a.btn.btn-outline-dark#lan(href="/") 中/EN
+    a.btn.btn-outline-dark#lan(href=base) 中/EN
     #top-block.w-100
       #cloud
         .twroadfont.text-block 革命不是請客吃飯，選舉不是投票凍蒜。
@@ -37,10 +37,10 @@ block body
         .twroadfont.text-block 不要問為什麼沒有人做這個先承認你就是沒有人
       .container.px-0.px-md-5.pt-md-4.position-relative
         #topbar.rounded-2.bg-white.p-3.w-100.row.align-items-center.gx-0
-          .col-md-auto: img.ms-2(src="../assets/img/pgln_g0v_summit.png", alt="", style="height: 3rem; width: auto;")
+          .col-md-auto: img.ms-2(src="assets/img/pgln_g0v_summit.png", alt="", style="height: 3rem; width: auto;")
           #timer-cfp.mx-auto.w-max.ps-md-5.my-2 CFP ~ Mar. 10th, 2024 UTC+8, <span>999</span> days left
           .col-md-auto.d-flex.align-items-center
-            a.link.ms-auto(href="/about-cfp/en") About
+            a.link.ms-auto(href=base+"about-cfp/en") About
             //a.link.ms-4(href="#", data-bs-toggle="modal", data-bs-target="#claiming") About Personal Data Collection
             a.btn.btn-summit-green.ms-4(href="//summit2024.g0v.tw/brd/2024/?lng=en") Submit<i class="ms-2 bi bi-box-arrow-up-right"></i>
             a.btn.btn-summit-yellow.ms-3.me-auto(href="http://eepurl.com/iDb61o", target="_blank") Subscribe<i class="ms-2 bi bi-envelope"></i>
@@ -80,7 +80,7 @@ block body
           p g0v replaces the “o” in gov with “0”, thereby reimagining the role of government from scratch, and represents the vision from 0 to 1 of the generation of digital natives.
           .mt-5: a.text-brown(href="//g0v.tw", target="_blank") More →
         .col.d-flex
-          img.mx-auto.me-md-0.mt-auto(src="../assets/img/zero-jump.svg", alt="", style="width: 10rem;")
+          img.mx-auto.me-md-0.mt-auto(src="assets/img/zero-jump.svg", alt="", style="width: 10rem;")
     #summit-topics.my-5.pb-5: .container.px-md-5
       h0.twroadfont.text-brown.position-absolute(style="transform: translateY(-60%);") What are the themes of g0v Summit 2024?
       .row.gx-0.gy-5.py-5.mb-5
@@ -120,12 +120,12 @@ block script
       if (userLanguage.includes('zh-hant') || userLanguage.includes('zh-tw') || userLanguage.includes('zh-hk') 
       || userLanguage.includes('zh-hans') || userLanguage.includes('zh-cn') || userLanguage.includes('zh')) {
         storage.setItem("userLang", "zh");
-        window.location.href="/";
+        window.location.href="/2024/";
       } else {
         storage.setItem("userLang", "en");
       }
     } else if(storage.getItem("userLang") === 'zh') {
-      window.location.href="/";
+      window.location.href="/2024/";
     }
 
     let vw = $(window).width();
@@ -167,7 +167,7 @@ block script
     $("#lan").on("click", function(e) {
       e.preventDefault();
       storage.setItem("userLang", "zh");
-      window.location.href="/";
+      window.location.href="/2024/";
     })
 
     $(function() {
