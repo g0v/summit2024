@@ -12,9 +12,11 @@ html, body {
 }
 
 body {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-family: "Noto Sans TC", sans-serif;
   overflow: hidden;
+  line-height: 1.75;
+  letter-spacing: 0.5px;
 }
 
 b, .fw-bold {
@@ -35,7 +37,12 @@ h6 {
   font-weight: bold;
 }
 
+red {
+  color: red;
+}
+
 a:link:not(.btn, .nav-link), a:visited:not(.btn, .nav-link) {
+  color: var(--pgln-brown);
   text-decoration: underline;
 }
 a:link:not(.btn, .nav-link):hover, a:visited:not(.btn, .nav-link):hover {
@@ -53,6 +60,23 @@ a:link:not(.btn, .nav-link):hover, a:visited:not(.btn, .nav-link):hover {
 
 .text-brown {
   color: var(--pgln-brown);
+}
+
+.btn-summit-yellow {
+  --bs-btn-color: #000;
+  --bs-btn-bg: rgba(245, 225, 116, 1);
+  --bs-btn-border-color: rgba(245, 225, 116, 1);
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: #c4b664;
+  --bs-btn-hover-border-color: #c4b664;
+  --bs-btn-focus-shadow-rgb: 153,110,60;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #c4b664;
+  --bs-btn-active-border-color: #c4b664;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #000;
+  --bs-btn-disabled-bg: rgba(245, 225, 116, 1);
+  --bs-btn-disabled-border-color: rgba(245, 225, 116, 1);
 }
 
 .btn-summit-green {
@@ -87,11 +111,45 @@ a:link:not(.btn, .nav-link):hover, a:visited:not(.btn, .nav-link):hover {
   animation: spin 1s linear infinite;
 }
 
+#lan {
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+}
+
+#cookie-agree {
+  font-size: 0.875rem;
+  background: var(--pgln-yellow);
+  display: block;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: max-content;
+  text-align: center;
+}
+
+#footer {
+  background: var(--bs-gray-300);
+}
+#footer a.link {
+  color: var(--pgln-brown);
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(-360deg);
+  }
+}
+@media (max-width: 767.99px) {
+  body {
+    font-size: 1.1rem;
+  }
+  h0 {
+    font-weight: bold;
+    font-size: 3rem;
   }
 }

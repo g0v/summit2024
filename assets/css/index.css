@@ -35,6 +35,10 @@
   text-decoration: none;
   color: var(--pgln-brown);
 }
+#topbar #timer-cfp span {
+  font-weight: bold;
+  color: var(--pgln-brown);
+}
 
 #write-something h0 {
   pointer-events: none;
@@ -47,7 +51,7 @@
 #write-something input {
   border: 0;
   box-shadow: none;
-  font-size: 1.5rem;
+  font-size: 1.5em;
   text-align: right;
 }
 
@@ -64,7 +68,7 @@
 }
 #what-is-summit .content {
   color: var(--pgln-brown);
-  font-size: 1.8rem;
+  font-size: 1.5em;
 }
 #what-is-summit #timer {
   color: var(--pgln-brown);
@@ -74,14 +78,14 @@
 }
 #what-is-summit #timer span {
   animation: timer-blink 1s linear infinite;
-  font-size: 8rem;
-  font-family: monospace;
+  font-size: 8em;
+  font-family: "Roboto Mono", monospace;
   font-weight: bold;
   line-height: 3rem;
   height: 3.5rem;
   display: block;
-  padding-left: 3rem;
-  padding-right: 1.5rem;
+  padding-left: 2.5rem;
+  padding-right: 3rem;
 }
 
 #what-is-g0v {
@@ -91,5 +95,5 @@
 }
 
 #summit-topics .content {
-  font-size: 3rem;
+  font-size: 2.5em;
 }
