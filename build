@@ -13,7 +13,7 @@ $bin/srcbuild-pug src/apply/index.pug > dist/apply/index.html
 echo "stat/all.pug ..."
 $bin/srcbuild-pug src/stat/all.pug > dist/stat/all.html
 echo "stat/user.pug ..."
-$bin/srcbuild-pug src/stat/user.pug > dist/stat/user.html
+$bin/srcbuild-pug src/stat/all.pug > dist/stat/user.html
 
 echo "copy image files"
 cp src/apply/img/*.svg dist/apply/img/
