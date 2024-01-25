@@ -2,13 +2,18 @@
 bin=./node_modules/.bin
 rm -rf dist
 mkdir -p dist/apply/img/
+mkdir -p dist/stat
 echo "build lib script ..."
 $bin/lsc -cbp --no-header src/apply/fields.ls > dist/apply/lib.js
 $bin/lsc -cbp --no-header src/apply/lib.ls >> dist/apply/lib.js
 $bin/uglifyjs dist/apply/lib.js -m -c > dist/apply/lib.min.js
 echo "build pug files to html files ..."
-echo "index.pug ..."
+echo "apply/index.pug ..."
 $bin/srcbuild-pug src/apply/index.pug > dist/apply/index.html
+echo "stat/all.pug ..."
+$bin/srcbuild-pug src/stat/all.pug > dist/stat/all.html
+echo "stat/user.pug ..."
+$bin/srcbuild-pug src/stat/user.pug > dist/stat/user.html
 
 echo "copy image files"
 cp src/apply/img/*.svg dist/apply/img/
