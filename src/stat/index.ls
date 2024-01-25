@@ -29,6 +29,9 @@ module.exports =
       for j from 0 til list.length =>
         data[][j + 1][i * 2 + 0] = list[j].0
         data[][j + 1][i * 2 + 1] = list[j].1
+    i = ks.length
+    data[][0][i * 2] = "目前投稿量"
+    data[][0][i * 2 + 1] = count-active
     @sheet.data data
     @view.render!
 
