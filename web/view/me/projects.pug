@@ -31,9 +31,13 @@ block body
                     a.btn.btn-sm.text-nowrap.btn-outline-primary(ld="view",href="#") #[span(pd="t") view] #[+i.i-eye]
                     a.btn.btn-sm.btn-outline-primary.text-nowrap(ld="edit",href="#") #[span(pd="t") edit] #[+i.i-pen]
             .flex-grow-1.text.d-flex.align-items-center: .w-100
-              .text-truncate.px-0.font-weight-bold(style="cursor:default")
-                a.text-dark.text-truncate.font-weight-bold.text-capitalize(
-                ld="title",href="#",style="max-width:450px;font-size:1.2em")
+              .d-flex.align-items-end
+                .text-truncate.px-0.font-weight-bold.flex-grow-1(style="cursor:default")
+                  a.text-wrap.text-dark.text-truncate.font-weight-bold.text-capitalize(
+                  ld="title",href="#",style="max-width:450px;font-size:1.2em;line-height:1em")
+                .d-none(ld="revoke"): .text-sm.text-danger.d-flex.align-items-center.g-1.clickable
+                  span.text-underline(pd="t") revoke
+                  +i.i-undo.text-sm
               .d-none.d-md-block: hr.my-3
               .d-block.d-md-none: .my-3
               div
