@@ -17,11 +17,12 @@ window.lib = ({def, i18n}) ->
     else "2024-" + "#idx".padStart(3, "0")
   info: ({prj}) ->
     _ = (v) -> (if v => v.v else v) or 'n/a'
+    gv = (v) -> if v => v.v else v
     form = ((prj.detail or {}).custom or {})[def.config.alias or def.slug] or {}
     lng = i18n.getLanguage!
     data =
-      name: _(form["title_en"])
-      description: _(form["description_en"])
+      name: gv(form["title_en"]) or gv(form["title_zh"]) or 'n/a'
+      description: gv(form["description_en"]) or gv(form["description_zh"]) or 'n/a'
       team:
         name: _(form["name"])
         taxid: ''
@@ -36,6 +37,6 @@ window.lib = ({def, i18n}) ->
         total: 0
         "expected-subsidy": 0
     if /zh/.exec(lng) =>
-      data.name = _(form["title_zh"])
-      data.description = _(form["description_zh"])
+      data.name = gv(form["title_zh"]) or gv(form["title_en"]) or 'n/a'
+      data.description = gv(form["description_zh"]) or gv(form["description_en"]) or 'n/a'
     data

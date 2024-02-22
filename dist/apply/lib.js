@@ -675,16 +675,23 @@ window.lib = function(arg$){
       }
     },
     info: function(arg$){
-      var prj, _, form, lng, data;
+      var prj, _, gv, form, lng, data;
       prj = arg$.prj;
       _ = function(v){
         return (v ? v.v : v) || 'n/a';
       };
+      gv = function(v){
+        if (v) {
+          return v.v;
+        } else {
+          return v;
+        }
+      };
       form = ((prj.detail || {}).custom || {})[def.config.alias || def.slug] || {};
       lng = i18n.getLanguage();
       data = {
-        name: _(form["title_en"]),
-        description: _(form["description_en"]),
+        name: gv(form["title_en"]) || gv(form["title_zh"]) || 'n/a',
+        description: gv(form["description_en"]) || gv(form["description_zh"]) || 'n/a',
         team: {
           name: _(form["name"]),
           taxid: '',
@@ -703,8 +710,8 @@ window.lib = function(arg$){
         }
       };
       if (/zh/.exec(lng)) {
-        data.name = _(form["title_zh"]);
-        data.description = _(form["description_zh"]);
+        data.name = gv(form["title_zh"]) || gv(form["title_en"]) || 'n/a';
+        data.description = gv(form["description_zh"]) || gv(form["description_en"]) || 'n/a';
       }
       return data;
     }
