@@ -1,40 +1,42 @@
 block variables
 doctype
 html(lang="zh-Hant-TW")
-    head
-        title #{title} | g0v Summit 2024 
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        meta(property='og:description' content='g0v Summit 是由 g0v 零時政府主辦的大型國際會議，慣例為 2 年一次。受到疫情影響，2022 年停辦，明年，Summit 2024 將喚醒你體內的熱血公民魂。')
-        meta(property='og:image' content="assets/img/pgln_g0v.png")
+  head
+    title #{title} | g0v Summit 2024 
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(property='og:description', content='g0v Summit 是由 g0v 零時政府主辦的大型國際會議，慣例為 2 年一次。受到疫情影響，2022 年停辦，明年，Summit 2024 將喚醒你體內的熱血公民魂。')
+    meta(property='og:image', content="assets/img/pgln_g0v.png")
 
-        script(async src='https://www.googletagmanager.com/gtag/js?id=G-3V52RYWJVJ')
-        script.
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-3V52RYWJVJ');
+    script(async src='https://www.googletagmanager.com/gtag/js?id=G-3V52RYWJVJ')
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3V52RYWJVJ');
 
-        base(href=base)
-        link(rel='icon' type='image/png' href='assets/img/pgln_and_wood.png')
-        link(link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM", crossorigin="anonymous")
-        link(rel='preconnect', href='https://fonts.googleapis.com')
-        link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin)
-        link(href='https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&family=Roboto+Mono&display=swap', rel='stylesheet')
-        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css", integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e", crossorigin="anonymous")
-        script(src='//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-64923.js')
-        block head
-    body(data-bs-theme="light")
-        .d-none.twroadfont 01234567890.abcdefghijklmnopqrstuvwxyz
-        block body
-        footer#footer.py-2.container-fluid: .row
-                .col-md
-                .col-md.text-center Copyright© g0v summit 2024
-                .col-md.text-center.text-md-end
-                    a.mx-2.link(href="//g0v.tw", target="_blank") g0v.tw
-                    a.mx-2.link(href="//github.com/g0v", target="_blank") github
-                    a.mx-2.link(href="https://g0v.hackmd.io/@SQLfOC1bRwKstcPS84Gu_w/H1aRf_W8a", target="_blank") 媒體素材 Press Kit
-        script(src=src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js", integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz", crossorigin="anonymous")
-        script(src='https://code.jquery.com/jquery-3.7.0.min.js' integrity='sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=' crossorigin='anonymous')
-        block script
+    base(href=base)
+    link(rel='icon', type='image/png', href='assets/img/pgln_and_wood.png')
+    link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css", rel="stylesheet", 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH", crossorigin="anonymous")
+    link(rel='preconnect', href='https://fonts.googleapis.com')
+    link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin)
+    link(href='https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&family=Roboto+Mono&display=swap', rel='stylesheet')
+    link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css", integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e", crossorigin="anonymous")
+    script(src='//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-64923.js')
+    block head
+  body(data-bs-theme="light")
+    .d-none.twroadfont 01234567890.abcdefghijklmnopqrstuvwxyz
+    block body
+    footer#footer.py-2.container-fluid: .row
+      .col-md
+      .col-md.text-center Copyright© g0v summit 2024
+      .col-md.text-center.text-md-end
+        a.mx-2.link(href="//g0v.tw", target="_blank") g0v.tw
+        a.mx-2.link(href="//github.com/g0v", target="_blank") github
+        a.mx-2.link(href="https://g0v.hackmd.io/@SQLfOC1bRwKstcPS84Gu_w/H1aRf_W8a", target="_blank") 媒體素材 Press Kit
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous")
+    script(src='https://code.jquery.com/jquery-3.7.0.min.js', integrity='sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=', crossorigin='anonymous')
+    block script
