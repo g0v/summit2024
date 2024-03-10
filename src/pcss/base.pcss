@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  color: theme('colors.neutral.600');
+}
+
+ul li {
+  list-style: none;
+  padding-left: 1em;
+  margin-bottom: theme('spacing.2');
+  &::before {
+    content: '-';
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+}
+
+
+.btn {
+  cursor: pointer;
+  font-size: theme('fontSize.base');
+  font-weight: 400;
+  display: inline-block;
+  padding: theme('spacing.1') theme('spacing.3');
+  border-radius: theme('borderRadius.md');
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  color: theme('colors.white');
+  background-color: theme('colors.primary');
+  &:hover {
+    filter: brightness(90%);
+  }
+}
+
+.btn-outline-dark {
+  color: theme('colors.neutral.500');
+  border: 1px solid theme('colors.neutral.500');
+  &:hover {
+    color: theme('colors.primary');
+    border-color: theme('colors.primary');
+  }
+}
