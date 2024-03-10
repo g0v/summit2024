@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -e
+if [[ -d .git ]]; then
+  REV=`git describe --always`
+  rm -rf _public
+  git clone $(git remote get-url origin) --depth 1 -b release _public
+  git clone $(git remote get-url origin) --depth 1 -b grantdash _grantdash
+  cd _public
+  git rm -r *
+  cp -R ../static/2024 ./static
+  cp -R ../_grantdash/web/static/assets/lib static/assets/lib
+  cp -R ../_grantdash/web/view ./view
+  cp -R ../_grantdash/dist ./
+  #git add *
+  #git commit -m "regen for $REV"
+  #git push
+  cd ..
+  #rm -rf _public
+  #rm -rf _grantdash
+else
+  echo "please use deploy under a git repo."
+fi

@@ -58,8 +58,8 @@ function buildPug (baseurl = '/2024/') {
 }
 
 gulp.task('build', async () => {
-  await buildPug('/2024/')
-  await buildPcss('/2024/')
+  await buildPug('/summit2024/')
+  await buildPcss('/summit2024/')
 })
 
 gulp.task('server', function () {
