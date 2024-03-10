@@ -28,15 +28,110 @@ html(lang="zh-Hant-TW")
     block head
   body(data-bs-theme="light")
     .d-none.twroadfont 01234567890.abcdefghijklmnopqrstuvwxyz
-    block body
-    footer#footer.py-2.container-fluid: .row
+    #loading
+      img(src="assets/img/", alt="")
+    header#header
+      nav.navbar.bg-body-tertiary.navbar-expand-lg
+        .container
+          a.navbar-brand(href='#'): img(src='assets/img/pgln_g0v_summit.png', alt='g0v Summit 2024', height='40')
+          button.navbar-toggler(type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasNavbar' aria-controls='offcanvasNavbar' aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+          .offcanvas.offcanvas-end#offcanvasNavbar(tabindex='-1' aria-labelledby='offcanvasNavbarLabel')
+            .offcanvas-header
+              h5.offcanvas-title#offcanvasNavbarLabel Offcanvas
+              button.btn-close(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
+            .offcanvas-body
+              .navbar-nav.ms-auto
+                a.nav-link 投稿
+                a.nav-link 講者
+                a.nav-link 議程
+                a.nav-link(href="visit") 交通
+                a.nav-link(href="https://g0v.hackmd.io/@summit2024/book/", target="_blank") 共筆
+                a.nav-link(href="https://www.youtube.com/@g0vTW", target="_blank") 直播
+    block main
+    footer#footer.py-5: .container
+      .row
+        .col-3
+          .mb-2.fw-bold Summit 2024
+          div 投稿
+          div 議程
+          div 交通
+          div 共筆
+          div 直播
+        .col-3
+          .mb-2.fw-bold 媒體素材
+          div Press Kit
+          div 電子報
+        .col-3
+          .mb-2.fw-bold 關於 Summit
+          div 籌備團隊
+          div 合作夥伴
+          div 行為準則
+        .col-3
+          .mb-2.fw-bold 歷年網頁
+          div: a(href="//summit.g0v.tw/2014") 2014
+          div: a(href="//summit.g0v.tw//2016") 2016
+          div: a(href="//summit.g0v.tw//2018") 2018
+          div: a(href="//summit.g0v.tw//2020") 2020
+      .row.mt-5
+        .col-12
+          .d-flex.flex-wrap
+            .me-5 Copyright CC by 4.0 @ g0v Summit 2024
+            a(href="#") 網站問題反饋
+            .ms-auto
+              img(src="assets/img/facebook.svg", alt="Facebook", class="me-3", height="28")
+              img(src="assets/img/instagram.svg", alt="Instagram", class="me-3", height="28")
+              img(src="assets/img/slack.svg", alt="Slack", class="me-3", height="28")
+              img(src="assets/img/twitter.svg", alt="Twitter", class="me-3", height="28")
+              img(src="assets/img/github.svg", alt="Github", class="me-3", height="28")
+              img(src="assets/img/email.svg", alt="Email", class="", height="28")
+    .d-none: .row
       .col-md
       .col-md.text-center Copyright© g0v summit 2024
       .col-md.text-center.text-md-end
         a.mx-2.link(href="//g0v.tw", target="_blank") g0v.tw
         a.mx-2.link(href="//github.com/g0v", target="_blank") github
         a.mx-2.link(href="https://g0v.hackmd.io/@SQLfOC1bRwKstcPS84Gu_w/H1aRf_W8a", target="_blank") 媒體素材 Press Kit
+    #cookie-agree.p-2.align-items-center.justify-content-center.d-none
+      div
+        | 本網站使用 cookies 於廣告、社群與分析等用途，藉以增進您的使用體驗，繼續使用本網站即代表您同意使用 cookies。
+      a.btn.btn-dark.flex-shrink-0.my-auto.ms-3(href="#") 同意
     script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous")
     script(src='https://code.jquery.com/jquery-3.7.0.min.js', integrity='sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=', crossorigin='anonymous')
+    script.
+      const storage = window.sessionStorage;
+      if(!storage.getItem("userLang")) {
+        var userLanguage = navigator.languages ? navigator.languages[0] : navigator.language || navigator.userLanguage;
+        userLanguage = userLanguage.toLowerCase();
+        console.log(userLanguage);
+        if (userLanguage.includes('zh-hant') || userLanguage.includes('zh-tw') || userLanguage.includes('zh-hk') 
+        || userLanguage.includes('zh-hans') || userLanguage.includes('zh-cn') || userLanguage.includes('zh')) {
+          storage.setItem("userLang", "zh");
+        } else {
+          storage.setItem("userLang", "en");
+          window.location.href="/2024/en";
+        }
+      } else if(storage.getItem("userLang") === 'en') {
+        window.location.href="/2024/en";
+      }
+
+      $("#cookie-agree a.btn").on("click", function(e) {
+        e.preventDefault();
+        storage.setItem("agreeCookie", true);
+        $("#cookie-agree").addClass("d-none");
+      })
+
+      $(function() {
+        if(!storage.getItem("agreeCookie")) {
+          $("#cookie-agree").removeClass("d-none");
+        }
+      })
+
+      $(window).on("load", function(e) {
+        $("body").css("overflow", "unset");
+        $("#loading").fadeOut(500);
+      })
+
+
     block script

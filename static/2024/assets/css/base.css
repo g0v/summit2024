@@ -1,8 +1,7 @@
-:root {
-  --pgln-orange: #DFB175;
-  --pgln-yellow: rgba(245, 225, 116, 1);
-  --pgln-brown: rgba(120, 108, 74, 1);
-  --pgln-light: rgba(253, 239, 219, 1);
+:root, [data-bs-theme=light] {
+  --summit-primary: #074E64;
+  --summit-secondary: #F779EE;
+  --bs-border-radius: 2px;
 }
 
 html, body {
@@ -17,24 +16,22 @@ body {
   overflow: hidden;
   line-height: 1.75;
   letter-spacing: 0.5px;
+  color: var(--bs-gray-700);
 }
 
 b, .fw-bold {
   font-weight: bold;
 }
 
-h0 {
-  font-weight: bold;
-  font-size: 5rem;
-}
-
 h1, h2, h3, h4, h5 {
   margin-bottom: 0.75rem;
   font-weight: bold;
+  color: var(--summit-primary);
 }
 
 h6 {
   font-weight: bold;
+  color: var(--summit-primary);
 }
 
 red {
@@ -79,25 +76,19 @@ a:link:not(.btn, .nav-link):hover, a:visited:not(.btn, .nav-link):hover {
   --bs-btn-disabled-border-color: rgba(245, 225, 116, 1);
 }
 
-.btn-summit-green {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: rgba(108, 154, 74, 1);
-  --bs-btn-border-color: rgba(108, 154, 74, 1);
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #507437;
-  --bs-btn-hover-border-color: #507437;
-  --bs-btn-focus-shadow-rgb: 60,153,110;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #507437;
-  --bs-btn-active-border-color: #507437;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: rgba(108, 154, 74, 1);
-  --bs-btn-disabled-border-color: rgba(108, 154, 74, 1);
+#cookie-agree {
+  font-size: 0.875rem;
+  background: var(--bs-gray-300);
+  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: max-content;
 }
 
 #loading {
-  background: var(--pgln-light);
+  background: var(--bs-gray-300);
   height: 100vh;
   width: 100vw;
   position: fixed;
@@ -111,45 +102,9 @@ a:link:not(.btn, .nav-link):hover, a:visited:not(.btn, .nav-link):hover {
   animation: spin 1s linear infinite;
 }
 
-#lan {
-  position: fixed;
-  right: 1rem;
-  top: 1rem;
-}
-
-#cookie-agree {
-  font-size: 0.875rem;
-  background: var(--pgln-yellow);
-  display: block;
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: max-content;
-  text-align: center;
-}
-
 #footer {
   background: var(--bs-gray-300);
 }
 #footer a.link {
   color: var(--pgln-brown);
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
-}
-@media (max-width: 767.99px) {
-  body {
-    font-size: 1.1rem;
-  }
-  h0 {
-    font-weight: bold;
-    font-size: 3rem;
-  }
 }

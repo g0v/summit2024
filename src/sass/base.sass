@@ -1,9 +1,8 @@
-:root
-  --pgln-orange: #DFB175
-  --pgln-yellow: rgba(245, 225, 116, 1)
-  --pgln-brown: rgba(120, 108, 74, 1)
-  --pgln-light: rgba(253, 239, 219, 1)
-
+:root, [data-bs-theme=light]
+  --summit-primary: #074E64
+  --summit-secondary: #F779EE
+  --bs-border-radius: 2px
+  
 html, body
   margin: 0
   padding: 0
@@ -15,6 +14,7 @@ body
   overflow: hidden
   line-height: 1.75
   letter-spacing: .5px
+  color: var(--bs-gray-700)
 
 b, .fw-bold
   font-weight: bold
@@ -22,9 +22,11 @@ b, .fw-bold
 h1, h2, h3, h4, h5
   margin-bottom: .75rem
   font-weight: bold
+  color: var(--summit-primary)
 
 h6
   font-weight: bold
+  color: var(--summit-primary)
 
 red
   color: red
@@ -64,16 +66,28 @@ a:link, a:visited
 
 #cookie-agree
   font-size: .875rem
-  background: var(--pgln-yellow)
-  display: block
+  background: var(--bs-gray-300)
+  display: flex
   position: fixed
   left: 0
   right: 0
   bottom: 0
   height: max-content
-  text-align: center
-  
+
+#loading
+  background: var(--bs-gray-300)
+  height: 100vh
+  width: 100vw
+  position: fixed
+  display: flex
+  justify-content: center
+  align-items: center
+  z-index: 99999
+  img
+    width: 5rem
+    animation: spin 1s linear infinite
+
 #footer
   background: var(--bs-gray-300)
-  a.link 
+  a.link
     color: var(--pgln-brown)
