@@ -7,29 +7,10 @@ const sitemap = require('gulp-sitemap')
 const path = require('path')
 const rename = require('gulp-rename')
 
-function buildSass (baseurl = '/2024/') {
-  let dest_path = '.' + path.join('/static/', baseurl, '/assets/css')
-  gulp
-    .src('src/sass/**/*.sass')
-    .pipe(
-      data(file => {
-        console.log('[build] ' + file['history'])
-      })
-    )
-    .pipe(sass.sync().on('error', sass.logError))
-    .pipe(gulp.dest(dest_path))
-    .pipe(connect.reload())
-
-  gulp
-    .src('./assets/**')
-    .pipe(gulp.dest('.' + path.join('/static/', baseurl, '/assets/')))
-    .pipe(connect.reload())
-}
-
 function buildPcss (baseurl = '/2024/') {
   let dest_path = '.' + path.join('/static/', baseurl, '/assets/css')
   gulp
-    .src('./assets/**')
+    .src('src/assets/**')
     .pipe(gulp.dest('.' + path.join('/static/', baseurl, '/assets/')))
   return gulp
     .src('src/pcss/*.pcss')
@@ -57,7 +38,7 @@ function buildPug (baseurl = '/2024/') {
       data(file => {
         console.log('[build] ' + file['history'])
         const result = {
-          index: require('./src/data/index.json'),
+          index: require('src/data/index.json'),
           timestamp: build_time,
           base: baseurl
         }
@@ -92,7 +73,7 @@ gulp.task('server', function () {
   buildPcss()
 
   gulp.watch(
-    ['src/**/*.pug', 'src/**/*.pcss', 'static/assets/js/*.js', 'data/*.json'],
+    ['src/**/*.pug', 'src/**/*.pcss', 'static/assets/js/*.js', 'src/data/*.json'],
     function (cb) {
       buildPug()
       buildPcss()

@@ -1,25 +1,14 @@
-# g0v Summit 2024 CFP
+# g0v Summit 2024
 
-## How to start
+- 使用 gulp + pug + tailwindcss
+- 使用 baseurl 來解決 /2024 的相對路徑問題
 
+## how to dev
 ```
-git checkout main
-npm i
-npm start
-```
-
-## How to deploy
-
-網站透過 grantdash 拉取 release branch 來部屬，所以要在 grantdash 這個 branch 執行 build 和 deploy
-
-```
-git checkout grantdash
-npm i
-./build
-./deploy
+  npm i
+  npm start
 ```
 
-然後到 grantdash 主控台（需權限） `計畫設定→模板設定→部屬網站→點擊更新`
-
-## TODO
-- [ ] rebuild with nuxtjs
+## how to deploy
+`./deploy`
+會自動將 static/2024 下的檔案推送到 gh-pages branch
