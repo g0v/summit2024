@@ -38,7 +38,7 @@ function buildPug (baseurl = '/2024/') {
       data(file => {
         console.log('[build] ' + file['history'])
         const result = {
-          index: require('src/data/index.json'),
+          data: require('./src/data/index.json'),
           timestamp: build_time,
           base: baseurl
         }

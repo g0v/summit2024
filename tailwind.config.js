@@ -20,7 +20,7 @@ module.exports = {
       padding: '1.5rem'
     },
     fontSize: {
-      xs: '0.75rem', // '12px'
+      xs: '0.75rem',
       sm: '0.875rem',
       base: '1rem',
       lg: '1.25rem',
@@ -33,6 +33,7 @@ module.exports = {
   plugins: [
     plugin(function ({ addBase, theme }) {
       addBase({
+        body: { fontSize: theme('fontSize.base')},
         h1: { fontSize: theme('fontSize.4xl'), fontWeight: '500' },
         h2: { fontSize: theme('fontSize.3xl'), fontWeight: '500' },
         h3: {

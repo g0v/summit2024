@@ -19,6 +19,16 @@ ul li {
   }
 }
 
+a:not(.btn, .nav-link) {
+  &:link,
+  &:visited {
+    color: theme('colors.primary');
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
 
 .btn {
   cursor: pointer;
