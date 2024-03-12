@@ -179,8 +179,8 @@ block script
       const delta = Math.ceil((b-a)/(24*60*60*1000));
       $("#timer span").text(delta);
       const delta_cfp = Math.ceil((c-a)/(24*60*60*1000));
-      $("#timer-cfp span").text(delta_cfp);
-
+      //$("#timer-cfp span").text(delta_cfp);
+      $("#timer-cfp").html('提案已截止');
       $("#cloud .text-block").each(function (index, el) {
         let x = randomInt(vw);
         let y = randomInt(vh);
