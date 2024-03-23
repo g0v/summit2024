@@ -17,11 +17,11 @@ block main
               .mb-8= team[0]
             else
               h5.mb-4= key
-              .grid.grid-cols-5.mb-8
+              .grid.mb-8(class="grid-cols-3 md:grid-cols-5")
                 each person in team
                   .mb-4= person
       else
         h3.mb-4= key
-        .grid.grid-cols-5.mb-12
+        .grid.mb-12(class="grid-cols-3 md:grid-cols-5")
           each person in staff
             .mb-4= person

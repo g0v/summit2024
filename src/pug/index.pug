@@ -5,11 +5,10 @@ block head
   link(rel="stylesheet", href="assets/css/base.css?version="+timestamp)
   link(rel="stylesheet", href="assets/css/index.css?version="+timestamp)
 block main
-  .relative.w-full(class="h-[90vh]")
-    img.w-full.h-full.object-cover(src="assets/img/summit_main_new.png", alt="g0v Summit 2024")
+  #banner.relative.w-full(class="h-[90vh] max-md:h-[40vh]")
     .top-box-inner.absolute(class="bottom-[15%] left-[5%]")
-      .text-4xl.font-bold g0v Summit 2024
-      .text-2xl.font-bold 台灣零時政府雙年會
+      .text-4xl.font-bold(class="max-md:text-3xl") g0v Summit 2024
+      .text-2xl.font-bold(class="max-md:text-xl") 台灣零時政府雙年會
   #milestone
   .container#about
     .my-20

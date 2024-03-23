@@ -56,3 +56,28 @@ a:not(.btn, .nav-link) {
     border-color: theme('colors.primary');
   }
 }
+
+#loading {
+  z-index: 9999;
+  background: white;
+  opacity: 1;
+  overflow: hidden;
+  transition: all 1s ease;
+  img {
+    height: 100%;
+    max-width: unset;
+    transform-origin: 42.8% 43.4%;
+    &.preload {
+      transform: scale(30);
+    }
+  }
+  &.scale img {
+    image-rendering: pixelated;
+    transition: all 2s ease;
+    transform: scale(30);
+  }
+  &.fadeout {
+    pointer-events: none;
+    opacity: 0;
+  }
+}

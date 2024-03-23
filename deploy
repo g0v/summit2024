@@ -2,12 +2,12 @@
 set -e
 if [[ -d .git ]]; then
   REV=`git describe --always`
-  npm run build
+  npm run deploy
   rm -rf _public
-  git clone $(git remote get-url origin) --depth 1 -b gh-pages _public
+  git clone $(git remote get-url origin) --depth 1 -b production _public
   cd _public
   git rm -r *
-  cp -R ../static/summit2024/* ./
+  cp -R ../static/2024/* ./
   git add *
   git commit -m "regen for $REV"
   git push

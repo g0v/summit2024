@@ -62,6 +62,11 @@ gulp.task('build', async () => {
   await buildPcss('/summit2024/')
 })
 
+gulp.task('deploy', async () => {
+  await buildPug('/2024/')
+  await buildPcss('/2024/')
+})
+
 gulp.task('server', function () {
   connect.server({
     port: 3000,
